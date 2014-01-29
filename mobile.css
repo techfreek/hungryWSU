@@ -107,7 +107,7 @@ body {
 	font-weight: 700;
 	font-size: 20px;
 	text-align: center;
-	color: #32C14C;
+	color: #76EE00;
 	
 }
 
@@ -177,10 +177,10 @@ body {
 #footer A:active {color: #FFF;}
 #footer A:hover {color: #FF0;}
 
-#website A:link { text-decoration: none;}
-#website A:visited {text-decoration: none;}
-#website A:active {text-decoration: none;}	
-#website A:hover {text-decoration: none;}
+#website A:link {color: #003c69; text-decoration: none;}
+#website A:visited {color: #003c69; text-decoration: none;}
+#website A:active {color: #003c69; text-decoration: none;}	
+#website A:hover {color: #003c69; text-decoration: none;}
 
 #address A:link {color: #000; text-decoration: none;}
 #address A:visited {color: #000; text-decoration: none;}

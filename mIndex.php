@@ -43,7 +43,7 @@
 						<div class="pure-u-1-2"><div id="type">Food</div></div>
 					</div>
 					<div id="details"  class="pure-g">
-						<div class="pure-u-1-2"><div id="address" id="detail">123 ABC Street, Seattle, WA 98121</div></div>
+						<div class="pure-u-1-2"><div id="address" id="detail"><a href="http://maps.google.com/maps?ie=UTF-8&amp;hl=en&amp;q=1525+NE+Merman+Drive%0APullman%2C+WA+98121">123 ABC Street, Seattle, WA 98121</a></div></div>
 						<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 417-5393</div></div>	
 						<div class="pure-u-1"><div class="yes">We'll deliver!</div></div>						
 						<div class="pure-u-1"><div id="website"><a href="http://jimmyjohns.com">Red Robin's Website</a></div></div>
@@ -57,7 +57,7 @@
 						<div class="pure-u-1-2"><div id="type">Food</div></div>
 					</div>
 					<div id="details" class="pure-g">
-						<div class="pure-u-1-2"><div id="address" id="detail">453 Merman St, Pullman, WA 98121</div></div>
+						<div class="pure-u-1-2"><div id="address" id="detail"><a href="http://maps.google.com/maps?ie=UTF-8&amp;hl=en&amp;q=1525+NE+Merman+Drive%0APullman%2C+WA+98121">453 Merman St, Pullman, WA 98121</a></div></div>
 						<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 345-2342</div></div>					
 						<div class="pure-u-1"><div class="yes">We'll deliver!</div></div>
 						<div class="pure-u-1"><div id="website"><a href="http://jimmyjohns.com">Website</a></div></div>
@@ -70,7 +70,7 @@
 						<div class="pure-u-1-2"><div id="type">Food</div></div>
 					</div>
 					<div id="details"  class="pure-g">
-						<div class="pure-u-1-2"><div id="address" id="detail">1920 Fail Dr, Failcity	, WA 99163</div></div>
+						<div class="pure-u-1-2"><div id="address" id="detail"><a href="http://maps.google.com/maps?ie=UTF-8&amp;hl=en&amp;q=1525+NE+Merman+Drive%0APullman%2C+WA+98121">1920 Fail Dr, Failcity	, WA 99163</a></div></div>
 						<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 234-4347</div></div>
 						<div class="pure-u-1"><div class="no">We don't deliver :(</div></div>
 						<div class="pure-u-1"><div id="website"><a href="http://jimmyjohns.com">Website</a></div></div>
@@ -83,7 +83,7 @@
 						<div class="pure-u-1-2"><div id="type">Food</div></div>
 					</div>
 					<div id="details"  class="pure-g">
-						<div class="pure-u-1-2"><div id="address" id="detail">3392 Stadium Way Pullman, WA 99163</div></div>
+						<div class="pure-u-1-2"><div id="address" id="detail"><a href="http://maps.google.com/maps?ie=UTF-8&amp;hl=en&amp;q=1525+NE+Merman+Drive%0APullman%2C+WA+98121">3392 Stadium Way Pullman, WA 99163</a></div></div>
 						<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 674-7534</div></div>
 						<div class="pure-u-1"><div class="no">We don't deliver :(</div></div>
 						<div class="pure-u-1"><div id="openTill" id="openTill" openHour="8" openMinute="00" closeHour="24" closeMinute="30"></div></div>
@@ -95,7 +95,7 @@
 						<div class="pure-u-1-2"><div id="type">Food</div></div>
 					</div>
 					<div id="details"  class="pure-g">
-						<div class="pure-u-1-2"><div id="address" id="detail">3392 Main St Pullman, WA 99163</div></div>
+						<div class="pure-u-1-2"><div id="address" id="detail"><a href="http://maps.google.com/maps?ie=UTF-8&amp;hl=en&amp;q=1525+NE+Merman+Drive%0APullman%2C+WA+98121">3392 Main St Pullman, WA 99163</a></div></div>
 						<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 564-2343</div></div>
 						<div class="pure-u-1"><div class="yes">We deliver</div></div>
 						<div class="pure-u-1"><div id="website"><a href="http://jimmyjohns.com">Website</a></div></div>
