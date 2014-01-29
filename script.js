@@ -1,12 +1,27 @@
 function filter() {
 	$( "div" ).each(function () {
-		if($(this).is('#result')) {	
+		if($(this).is('.result')) {	
 			if($(this).find(".no").length > 0) {	
 				$(this).slideToggle(600);
 				//$(this).toggle(400);
 			}
 		}
 	});
+}
+
+function domainNameCheck()
+{
+	if(document.URL.indexOf("hungry") >= 0)
+		{
+			document.title = "HungyWSU";
+			document.getElementById("logo").src="hungry.png";
+			document.getElementById("affil").text="asdfasdf";
+			$( "div" ).each(function () {
+				if($(this).is("#affil")) {
+					$(this).text("HungryWSU.com has no affiliation with WSU");
+				}
+			})
+		}		
 }
 
 function closingTime(timeTillClose) {
@@ -156,4 +171,20 @@ function hideDetails() {
 			$(this).hide();
 		}
 	});
+}
+
+function mobileDetails(){
+	$(".result").click(function() {
+				//alert($(this).find("#details").css('display'));
+				if($(this).find("#details").css('display') == "none")
+				{
+					
+					$(this).find("#details").slideDown();
+				}
+				else
+				{
+					$(this).find("#details").slideUp();
+				}
+				updateTime();
+			})
 }

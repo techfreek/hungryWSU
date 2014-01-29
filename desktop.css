@@ -63,8 +63,8 @@ body {
 	padding-left: 20px;
 }
 
-.pure-u-1-3 a {
-	
+#name a {
+	text-shadow: 3px 3px #000;
 }
 
 #type {
@@ -77,6 +77,10 @@ body {
 #address {
 	padding: 10px;
 	padding-left: 20px;
+}
+
+#address a{
+	text-shadow: 1px 2px #BFBFBF;
 }
 
 #phoneNum {
@@ -153,3 +157,13 @@ body {
 #footer A:visited {color: #F0F;}
 #footer A:active {color: #FFF;}
 #footer A:hover {color: #FF0;}
+
+#name A:link {color: #fff; text-decoration: none;}
+#name A:visited {color: #fff; text-decoration: none;}
+#name A:active {color: #fff; text-decoration: none;}	
+#name A:hover {color: #fff; text-decoration: none;}
+
+#address A:link {color: #000; text-decoration: none;}
+#address A:visited {color: #000; text-decoration: none;}
+#address A:active {color: #000; text-decoration: none;}	
+#address A:hover {color: #000; text-decoration: none;}

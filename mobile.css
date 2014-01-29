@@ -1,14 +1,14 @@
 body {
 	background-color: #981e32;
 	font-size: 16px;
-	width: 320px;
+	
 }
 
 #logo {
 	display: block;
 	margin: 0 auto;
 	height: 10%;
-	width: 50%;
+	width: 90%;
 }
 
 #tagLine {
@@ -17,8 +17,7 @@ body {
 	font-family: "Arial Black";
 	font-weight: 800;
 	margin: 30px;
-	margin-top: -20px;
-	padding-left: -5%;
+	margin-top: -10px;
 }
 
 #deliveryButton {
@@ -37,14 +36,14 @@ body {
 
 #content {
 	margin: 0 auto;
-	width: 90%;
+	width: 320px;	
 }
 
 #content h1 {
 	text-align: center;
 }
 
-#result {
+.result {
 	background-color: #fff;
 	margin-bottom: 35px;
 	box-shadow: 5px 5px 10px #000;
@@ -84,21 +83,21 @@ body {
 #delivers {
 	text-align: center;
 	padding: 10px;
+	font-size: 20px;
 	
 }
 
 .yes {
 	font-weight: 700;
-	padding-top:15px;
-	padding-bottom: 15px;
+	font-size: 20px;
 	text-align: center;
 	color: #32C14C;
+	
 }
 
 .no {
 	font-weight: 700;
-	padding-top:15px;
-	padding-bottom: 15px;
+	font-size: 20px;
 	text-align: center;
 	color: #000;
 }
@@ -106,29 +105,58 @@ body {
 #openTill {
 	text-align: center;
 	padding: 25px;
-	padding-top: 0px;
+	padding-bottom: 15px;
+	padding-top: 7px;
 	font-weight: 800;
 	font-size: 20px;
 }
 
 #footer {
 	text-align: center;
-	font-size: 22px;
+	font-size: 14px;
 	color: #fff;
 	background-color: #5e6a71;
-	width: 65%;
+	width: 75%;
 	margin: 0 auto;
-	padding: 20px;
-	font-weight: 700;
+	padding: 10px;
+	font-weight: 600;
 	margin-bottom: 25px;
 }
 
 #affil {
-	font-size: 16px;
-	margin: 0px;
+	font-size: inherit;
 }
 
-#footer h5 {
-	font-size: 80%;
-	margin: 0px;
+#policy {
+	padding: 10px;
 }
+	
+#footer h5 {
+	font-weight: 700;
+	margin: 0px;
+	font-size: inherit;
+}
+
+#footer h6 {
+	font-size: inherit;
+	font-weight: 700;
+	margin: 5px;
+}
+
+#footer a {
+	font-size: 12px;
+	font-weight: 500;
+}
+
+#left {
+	text-align: left;
+}
+
+#right {
+	text-align: right;
+}
+
+#footer A:link {color: #FFF;}
+#footer A:visited {color: #F0F;}
+#footer A:active {color: #FFF;}
+#footer A:hover {color: #FF0;}
