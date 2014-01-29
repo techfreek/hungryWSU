@@ -1,0 +1,134 @@
+body {
+	background-color: #981e32;
+	font-size: 16px;
+	width: 320px;
+}
+
+#logo {
+	display: block;
+	margin: 0 auto;
+	height: 10%;
+	width: 50%;
+}
+
+#tagLine {
+	color: #fff;
+	text-align: center;
+	font-family: "Arial Black";
+	font-weight: 800;
+	margin: 30px;
+	margin-top: -20px;
+	padding-left: -5%;
+}
+
+#deliveryButton {
+	background-color: #5e6a71;
+	border-radius: 10px;
+	padding: 10px;
+	width: 225px;
+	margin: 0 auto;	
+	margin-top: 10px;
+	margin-bottom: 20px;
+	color: #fff;
+	font-weight: 800;
+	font-size: 16px;
+	text-align: center;
+}
+
+#content {
+	margin: 0 auto;
+	width: 90%;
+}
+
+#content h1 {
+	text-align: center;
+}
+
+#result {
+	background-color: #fff;
+	margin-bottom: 35px;
+	box-shadow: 5px 5px 10px #000;
+	font-size: 16px;
+}
+
+#summary {
+	color: #fff;
+	background-color: #5e6a71;
+	width: 100%;
+}
+
+#name {
+	font-weight: 800;
+	padding: 15px;
+	padding-left: 20px;
+}
+
+#type {
+	text-align: right;
+	font-weight: 600;
+	padding: 15px;
+	padding-right: 20px;
+}
+
+#address {
+	padding: 10px;
+	padding-left: 20px;
+}
+
+#phoneNum {
+	text-align: right;
+	padding: 10px;
+	padding-right: 20px;
+}
+
+#delivers {
+	text-align: center;
+	padding: 10px;
+	
+}
+
+.yes {
+	font-weight: 700;
+	padding-top:15px;
+	padding-bottom: 15px;
+	text-align: center;
+	color: #32C14C;
+}
+
+.no {
+	font-weight: 700;
+	padding-top:15px;
+	padding-bottom: 15px;
+	text-align: center;
+	color: #000;
+}
+
+#openTill {
+	text-align: center;
+	padding: 25px;
+	padding-top: 0px;
+	font-weight: 800;
+	font-size: 20px;
+}
+
+#footer {
+	text-align: center;
+	font-size: 22px;
+	color: #fff;
+	background-color: #5e6a71;
+	width: 65%;
+	margin: 0 auto;
+	padding: 20px;
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+
+#affil {
+	font-size: 16px;
+	margin: 0px;
+}
+
+#footer h5 {
+	font-size: 80%;
+	margin: 0px;
+}

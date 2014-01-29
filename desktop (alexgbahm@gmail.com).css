@@ -1,0 +1,133 @@
+body {
+	background-color: #981e32;
+}
+
+#logo {
+	display: block;
+	margin: 0 auto;
+	background-image: url('drunk.png');
+	height: 92px;
+	width: 372px;
+}
+
+#tagLine {
+	color: #fff;
+	text-align: center;
+	font-family: "Arial Black";
+	font-weight: 800;
+	margin: 30px;
+	margin-top: -20px;
+	padding-left: 60px;
+}
+
+#deliveryButton {
+	background-color: #5e6a71;
+	border-radius: 10px;
+	padding: 10px;
+	width: 225px;
+	margin: 0 auto;	
+	margin-top: 10px;
+	margin-bottom: 20px;
+	color: #fff;
+	font-weight: 800;
+	font-size: 20px;
+	text-align: center;
+}
+
+#content {
+	margin: 0 auto;
+	width: 60%;
+}
+
+#content h1 {
+	text-align: center;
+}
+
+#result {
+	background-color: #fff;
+	font-size: 18px;
+	margin-bottom: 35px;
+	box-shadow: 5px 5px 10px #000;
+}
+
+#summary {
+	font-size: 25px;
+	color: #fff;
+	background-color: #5e6a71;
+	width: 100%;
+}
+
+#name {
+	font-weight: 800;
+	padding: 15px;
+	padding-left: 20px;
+}
+
+#type {
+	text-align: right;
+	font-weight: 600;
+	padding: 15px;
+	padding-right: 20px;
+}
+
+#address {
+	padding: 10px;
+	padding-left: 20px;
+}
+
+#phoneNum {
+	text-align: right;
+	padding: 10px;
+	padding-right: 20px;
+}
+
+#delivers {
+	text-align: center;
+	padding: 10px;
+	
+}
+
+.yes {
+	font-weight: 700;
+	padding-top:15px;
+	padding-bottom: 15px;
+	text-align: center;
+	color: #32C14C;
+}
+
+.no {
+	font-weight: 700;
+	padding-top:15px;
+	padding-bottom: 15px;
+	text-align: center;
+	color: #000;
+}
+
+#openTill {
+	text-align: center;
+	padding: 25px;
+	padding-top: 0px;
+	font-weight: 800;
+	font-size: 22px;
+}
+
+#footer {
+	text-align: center;
+	font-size: 25px;
+	color: #fff;
+	background-color: #5e6a71;
+	width: 65%;
+	margin: 0 auto;
+	padding: 20px;
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+
+#affil {
+	font-size: 20px;
+	margin: 0px;
+}
+
+#footer h5 {
+	margin: 0px;
+}
