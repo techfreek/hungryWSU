@@ -9,13 +9,14 @@
   <script src="script.js"></script>
   <link href="mobile.css" rel="stylesheet">
   <script type="text/javascript">
-	domainNameCheck();
+	
 	$(document).ready(function() {
 		closingTime();
 		updateTime();
 		$( "#deliveryButton" ).click(function() {filter();});
 		mobileDetails();
 		hideDetails();
+		domainNameCheck();
 	});
 	
 	</script>
@@ -25,9 +26,13 @@
 <body>
 	<div id="content">
 	<img id="logo" src="drunk.png"/>
-	<script>
+	
+	<!--To Do list:
+		Change wording of how I label mobile URLS
+		change color of mobile urls
 		
-	</script>
+		-->
+	
 	<div id="tagLine">Let's face it, you're hungry. What's still open?</div>
 			<div id="deliveryButton">Want it delivered?</div>		
 			<div id="results">
@@ -41,6 +46,7 @@
 						<div class="pure-u-1-2"><div id="address" id="detail">123 ABC Street, Seattle, WA 98121</div></div>
 						<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 417-5393</div></div>	
 						<div class="pure-u-1"><div class="yes">We'll deliver!</div></div>						
+						<div class="pure-u-1"><div id="website"><a href="http://jimmyjohns.com">Red Robin's Website</a></div></div>
 						<div class="pure-u-1"><div id="openTill" openHour="8" openMinute="00" closeHour="2" closeMinute="30"></div></div>
 					</div>
 				</div>
@@ -54,6 +60,7 @@
 						<div class="pure-u-1-2"><div id="address" id="detail">453 Merman St, Pullman, WA 98121</div></div>
 						<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 345-2342</div></div>					
 						<div class="pure-u-1"><div class="yes">We'll deliver!</div></div>
+						<div class="pure-u-1"><div id="website"><a href="http://jimmyjohns.com">Website</a></div></div>
 						<div class="pure-u-1"><div id="openTill" openHour="12" openMinute="00" closeHour="3" closeMinute="30"></div></div>
 					</div>
 				</div>
@@ -66,6 +73,7 @@
 						<div class="pure-u-1-2"><div id="address" id="detail">1920 Fail Dr, Failcity	, WA 99163</div></div>
 						<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 234-4347</div></div>
 						<div class="pure-u-1"><div class="no">We don't deliver :(</div></div>
+						<div class="pure-u-1"><div id="website"><a href="http://jimmyjohns.com">Website</a></div></div>
 						<div class="pure-u-1"><div id="openTill" openHour="8" openMinute="00" closeHour="23" closeMinute="30"></div></div>
 					</div>
 				</div>
@@ -90,6 +98,7 @@
 						<div class="pure-u-1-2"><div id="address" id="detail">3392 Main St Pullman, WA 99163</div></div>
 						<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 564-2343</div></div>
 						<div class="pure-u-1"><div class="yes">We deliver</div></div>
+						<div class="pure-u-1"><div id="website"><a href="http://jimmyjohns.com">Website</a></div></div>
 						<div class="pure-u-1"><div id="openTill" openHour="1" openMinute="00" closeHour="24" closeMinute="00"></div></div>
 					</div>
 				</div>

@@ -7,8 +7,8 @@ body {
 #logo {
 	display: block;
 	margin: 0 auto;
-	height: 10%;
-	width: 90%;
+	max-width: 75%;
+	height: auto;
 }
 
 #tagLine {
@@ -36,7 +36,7 @@ body {
 
 #content {
 	margin: 0 auto;
-	width: 320px;	
+	width: 90%;
 }
 
 #content h1 {
@@ -74,10 +74,26 @@ body {
 	padding-left: 20px;
 }
 
+#address a{
+	text-shadow: 1px 2px #BFBFBF;
+}
+
 #phoneNum {
 	text-align: right;
 	padding: 10px;
 	padding-right: 20px;
+}
+
+#website {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#website a{
+	
+	font-weight: 700;
+	font-size: 20px;
+	text-shadow: 1px 2px #BFBFBF;
 }
 
 #delivers {
@@ -160,3 +176,13 @@ body {
 #footer A:visited {color: #F0F;}
 #footer A:active {color: #FFF;}
 #footer A:hover {color: #FF0;}
+
+#website A:link { text-decoration: none;}
+#website A:visited {text-decoration: none;}
+#website A:active {text-decoration: none;}	
+#website A:hover {text-decoration: none;}
+
+#address A:link {color: #000; text-decoration: none;}
+#address A:visited {color: #000; text-decoration: none;}
+#address A:active {color: #000; text-decoration: none;}	
+#address A:hover {color: #000; text-decoration: none;}

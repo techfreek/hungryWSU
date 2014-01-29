@@ -35,6 +35,7 @@
 			<div id="deliveryButton">Want it delivered?</div>
 			
 			<div id="results">
+			<!---
 			<?php  /*
 				$result = mysqli+query();
 				
@@ -61,6 +62,7 @@
 					echo '</div>';
 				}
 			*/?>
+			-->
 			
 				<div class="result">
 					<!--Add timestamp that displays today's closing time-->

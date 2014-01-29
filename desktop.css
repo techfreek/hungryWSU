@@ -6,8 +6,8 @@ body {
 #logo {
 	display: block;
 	margin: 0 auto;
-	height: 92px;
 	width: 372px;
+	height: auto;
 }
 
 #tagLine {
