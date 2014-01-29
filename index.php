@@ -35,6 +35,33 @@
 			<div id="deliveryButton">Want it delivered?</div>
 			
 			<div id="results">
+			<?php  /*
+				$result = mysqli+query();
+				
+				while($restaurant = mysqli_fetch_array($result))
+				{
+					echo '<div class="result">';
+					echo '<div id="summary" class="pure-g">';
+					echo '<div class="pure-u-1-3"><div id="name"><a href="' . $restaurant['url'] . '">' . $restaurant['name'] . '</a></div></div>';
+					if( $restaurant['deliver'] == true)
+					{
+						echo '<div class="pure-u-1-3"><div class="yes">We\'ll deliver!</div></div>';
+					}
+					else
+					{
+						echo '<div class="pure-u-1-3"><div class="no">We don\'t deliver :(</div></div>';
+					}
+					echo '<div class="pure-u-1-3"><div id="' . $restaurant['category'] . '">' . $restaurant['category'] . '</div</div>';
+					echo '</div>';
+					echo '<div id="details" class="pure-g">';
+					echo '<div class="pure-u-1-2"><div id="address" id="detail><a href="http://maps.google.com/maps?ie=UTF-8&amp;hl=en&amp;q=' . str_replace(' ', '+', $restaurant['street']) . '%0A' . $restaurant['city'] . '%2C+' . $restaurant['state'] . '+' . $restaurant['zip'] .'">' . $restaurant['street'] . ', ' . $restaurant['city'] . ', ' . $restaurant['state'] . ' ' . $restaurant['zip'] . '</a></div></div>';
+					echo '<div class="pure-u-1-2"><div id="phoneNum">Phone: ' . $restaurant['phone'] . '</div></div>';
+					echo '<div class="pure-u-1-2"><div id="openTill" openHour="' . $restaurant['openHour'] . '" openMinute="' . $restaurant['openMinute'] . '" closeHour="' . $restaurant['closeHour'] . '" closeMinute="' . $restaurant['closeMinute'] . '"></div></div>';
+					echo '</div>';
+					echo '</div>';
+				}
+			*/?>
+			
 				<div class="result">
 					<!--Add timestamp that displays today's closing time-->
 					<div id="summary" class="pure-g">
