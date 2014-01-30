@@ -174,16 +174,16 @@ function hideDetails() {
 }
 
 function mobileDetails(){
-	$(".result").click(function() {
+	$(".summary").click(function() {
 				//alert($(this).find("#details").css('display'));
-				if($(this).find("#details").css('display') == "none")
+				if($(this).parent().find("#details").css('display') == "none")
 				{
 					
-					$(this).find("#details").slideDown();
+					$(this).parent().find("#details").slideDown();
 				}
 				else
 				{
-					$(this).find("#details").slideUp();
+					$(this).parent().find("#details").slideUp();
 				}
 				updateTime();
 			})

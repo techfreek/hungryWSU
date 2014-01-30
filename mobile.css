@@ -37,6 +37,7 @@ body {
 #content {
 	margin: 0 auto;
 	width: 90%;
+	max-width: 640px;
 }
 
 #content h1 {
@@ -50,7 +51,7 @@ body {
 	font-size: 16px;
 }
 
-#summary {
+.summary {
 	color: #fff;
 	background-color: #5e6a71;
 	width: 100%;
@@ -75,7 +76,7 @@ body {
 }
 
 #address a{
-	text-shadow: 1px 2px #BFBFBF;
+	font-weight: 700;
 }
 
 #phoneNum {
@@ -90,10 +91,8 @@ body {
 }
 
 #website a{
-	
 	font-weight: 700;
 	font-size: 20px;
-	text-shadow: 1px 2px #BFBFBF;
 }
 
 #delivers {
@@ -133,6 +132,7 @@ body {
 	color: #fff;
 	background-color: #5e6a71;
 	width: 75%;
+	max-width: 460px;
 	margin: 0 auto;
 	padding: 10px;
 	font-weight: 600;
@@ -177,10 +177,10 @@ body {
 #footer A:active {color: #FFF;}
 #footer A:hover {color: #FF0;}
 
-#website A:link {color: #003c69; text-decoration: none;}
-#website A:visited {color: #003c69; text-decoration: none;}
-#website A:active {color: #003c69; text-decoration: none;}	
-#website A:hover {color: #003c69; text-decoration: none;}
+#website A:link {color: #981e32; text-decoration: none;}
+#website A:visited {color: #981e32; text-decoration: none;}
+#website A:active {color: #981e32; text-decoration: none;}	
+#website A:hover {color: #981e32; text-decoration: none;}
 
 #address A:link {color: #000; text-decoration: none;}
 #address A:visited {color: #000; text-decoration: none;}

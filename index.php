@@ -66,10 +66,12 @@
 			
 				<div class="result">
 					<!--Add timestamp that displays today's closing time-->
-					<div id="summary" class="pure-g">
-						<div class="pure-u-1-3"><div id="name"><a href="http://www.redrobin.com/">Red Robin</a></div></div>
-						<div class="pure-u-1-3"><div class="yes">We'll deliver!</div></div>
-						<div class="pure-u-1-3"><div id="type">Food</div></div>
+					<div class="summary">
+						<div class="pure-g">
+							<div class="pure-u-1-3"><div id="name"><a href="http://www.redrobin.com/">Red Robin</a></div></div>
+							<div class="pure-u-1-3"><div class="yes">We'll deliver!</div></div>
+							<div class="pure-u-1-3"><div id="type">Food</div></div>
+						</div>
 					</div>
 					<div id="details"  class="pure-g">
 						<div class="pure-u-1-2"><div id="address" id="detail"><a href="http://maps.google.com/maps?ie=UTF-8&amp;hl=en&amp;q=1525+NE+Merman+Drive%0APullman%2C+WA+98121">123 ABC Street, Seattle, WA 98121</a></div></div>
@@ -79,10 +81,12 @@
 				</div>
 				<div class="result">
 					<!--Add timestamp that displays today's closing time-->
-					<div id="summary" class="pure-g">
-						<div class="pure-u-1-3"><div id="name"><a href="http://www.zzubarandgrill.com/">The Zzu</a></div></div>
-						<div class="pure-u-1-3"><div class="yes">We'll deliver!</div></div>
-						<div class="pure-u-1-3"><div id="type">Food</div></div>
+					<div class="summary">
+						<div class="pure-g">
+							<div class="pure-u-1-3"><div id="name"><a href="http://www.zzubarandgrill.com/">The Zzu</a></div></div>
+							<div class="pure-u-1-3"><div class="yes">We'll deliver!</div></div>
+							<div class="pure-u-1-3"><div id="type">Food</div></div>
+						</div>
 					</div>
 					<div id="details" class="pure-g">
 						<div class="pure-u-1-2"><div id="address" id="detail">453 Merman St, Pullman, WA 98121</div></div>
@@ -91,10 +95,12 @@
 					</div>
 				</div>
 				<div class="result">
-					<div id="summary" class="pure-g">
-						<div class="pure-u-1-3"><div id="name">Jimmy Johns</div></div>
-						<div class="pure-u-1-3"><div class="no">We don't deliver :(</div></div>
-						<div class="pure-u-1-3"><div id="type">Food</div></div>
+					<div class="summary">
+						<div class="pure-g">
+							<div class="pure-u-1-3"><div id="name">Jimmy Johns</div></div>
+							<div class="pure-u-1-3"><div class="no">We don't deliver</div></div>
+							<div class="pure-u-1-3"><div id="type">Food</div></div>
+						</div>
 					</div>
 					<div id="details"  class="pure-g">
 						<div class="pure-u-1-2"><div id="address" id="detail">1920 Fail Dr, Failcity	, WA 99163</div></div>
@@ -103,10 +109,12 @@
 					</div>
 				</div>
 				<div class="result">
-					<div id="summary" class="pure-g">
-						<div class="pure-u-1-3"><div id="name">McDonald's</div></div>
-						<div class="pure-u-1-3"><div class="no">We don't deliver :(</div></div>
-						<div class="pure-u-1-3"><div id="type">Food</div></div>
+					<div class="summary">
+						<div class="pure-g">
+							<div class="pure-u-1-3"><div id="name">McDonald's</div></div>
+							<div class="pure-u-1-3"><div class="no">We don't deliver</div></div>
+							<div class="pure-u-1-3"><div id="type">Food</div></div>
+						</div>
 					</div>
 					<div id="details"  class="pure-g">
 						<div class="pure-u-1-2"><div id="address" id="detail">3392 Stadium Way Pullman, WA 99163</div></div>
@@ -115,10 +123,12 @@
 					</div>
 				</div>
 				<div class="result">
-					<div id="summary" class="pure-g">
-						<div class="pure-u-1-3"><div id="name">Pizza Hut</div></div>
-						<div class="pure-u-1-3"><div class="yes">We deliver</div></div>
-						<div class="pure-u-1-3"><div id="type">Food</div></div>
+					<div class="summary">
+						<div class="pure-g">
+							<div class="pure-u-1-3"><div id="name">Pizza Hut</div></div>
+							<div class="pure-u-1-3"><div class="yes">We deliver</div></div>
+							<div class="pure-u-1-3"><div id="type">Food</div></div>
+						</div>
 					</div>
 					<div id="details"  class="pure-g">
 						<div class="pure-u-1-2"><div id="address" id="detail">3392 Main St Pullman, WA 99163</div></div>
