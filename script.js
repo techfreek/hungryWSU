@@ -9,12 +9,19 @@ function filter() {
 	});
 }
 
-function domainNameCheck()
+function updateImage()
+{
+	if(document.URL.indexOf("hungry") >= 0)
+		{
+			document.getElementById("logo").src="hungry.png";
+		}		
+}
+
+function updateText()
 {
 	if(document.URL.indexOf("hungry") >= 0)
 		{
 			document.title = "HungyWSU";
-			document.getElementById("logo").src="hungry.png";
 			document.getElementById("affil").text="asdfasdf";
 			$( "div" ).each(function () {
 				if($(this).is("#affil")) {
@@ -167,7 +174,7 @@ function dateTime() {
 
 function hideDetails() {
 	$( "div" ).each(function (i) {
-		if($(this).is('#details')) {	
+		if($(this).is('.details')) {	
 			$(this).hide();
 		}
 	});
@@ -175,15 +182,19 @@ function hideDetails() {
 
 function mobileDetails(){
 	$(".summary").click(function() {
-				//alert($(this).find("#details").css('display'));
-				if($(this).parent().find("#details").css('display') == "none")
+				//alert($(this).find(".details").css('display'));
+				$(".details").each(function() {
+					$(this).slideUp();
+				});
+				
+				if($(this).parent().find(".details").css('display') == "none")
 				{
 					
-					$(this).parent().find("#details").slideDown();
+					$(this).parent().find(".details").slideDown();
 				}
 				else
 				{
-					$(this).parent().find("#details").slideUp();
+					$(this).parent().find(".details").slideUp();
 				}
 				updateTime();
 			})

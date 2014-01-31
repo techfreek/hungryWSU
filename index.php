@@ -12,7 +12,7 @@
 	$(document).ready(function() {
 		//closingTime();\
 		updateTime();
-		domainNameCheck();
+		updateText();
 		$( "#deliveryButton" ).click(function() {filter();});
 				setInterval(function(){updateTime()},60000); //This will be the update interval
 		/*if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -31,6 +31,11 @@
 <body>
 	<div id="content">
 	<img id="logo" src="drunk.png"/>
+	
+	<script>
+		updateImage();
+	</script>
+	
 	<div id="tagLine">Let's face it, you're hungry. What's still open?</div>
 			<div id="deliveryButton">Want it delivered?</div>
 			
@@ -73,10 +78,12 @@
 							<div class="pure-u-1-3"><div id="type">Food</div></div>
 						</div>
 					</div>
-					<div id="details"  class="pure-g">
-						<div class="pure-u-1-2"><div id="address" id="detail"><a href="http://maps.google.com/maps?ie=UTF-8&amp;hl=en&amp;q=1525+NE+Merman+Drive%0APullman%2C+WA+98121">123 ABC Street, Seattle, WA 98121</a></div></div>
-						<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 417-5393</div></div>					
-						<div class="pure-u-1"><div id="openTill" openHour="8" openMinute="00" closeHour="2" closeMinute="30"></div></div>
+					<div class="details">
+						<div class="pure-g">
+							<div class="pure-u-1-2"><div id="address" id="detail"><a href="http://maps.google.com/maps?ie=UTF-8&amp;hl=en&amp;q=1525+NE+Merman+Drive%0APullman%2C+WA+98121">123 ABC Street, Seattle, WA 98121	</a></div></div>
+							<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 417-5393</div></div>					
+							<div class="pure-u-1"><div id="openTill" openHour="8" openMinute="00" closeHour="2" closeMinute="30"></div></div>
+						</div>
 					</div>
 				</div>
 				<div class="result">
@@ -88,10 +95,12 @@
 							<div class="pure-u-1-3"><div id="type">Food</div></div>
 						</div>
 					</div>
-					<div id="details" class="pure-g">
-						<div class="pure-u-1-2"><div id="address" id="detail">453 Merman St, Pullman, WA 98121</div></div>
-						<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 345-2342</div></div>					
-						<div class="pure-u-1"><div id="openTill" openHour="12" openMinute="00" closeHour="3" closeMinute="30"></div></div>
+					<div class="details">
+						<div class="pure-g">
+							<div class="pure-u-1-2"><div id="address" id="detail">453 Merman St, Pullman, WA 98121</div></div>
+							<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 345-2342</div></div>					
+							<div class="pure-u-1"><div id="openTill" openHour="12" openMinute="00" closeHour="3" closeMinute="30"></div></div>
+						</div>
 					</div>
 				</div>
 				<div class="result">
@@ -102,10 +111,12 @@
 							<div class="pure-u-1-3"><div id="type">Food</div></div>
 						</div>
 					</div>
-					<div id="details"  class="pure-g">
-						<div class="pure-u-1-2"><div id="address" id="detail">1920 Fail Dr, Failcity	, WA 99163</div></div>
-						<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 234-4347</div></div>
-						<div class="pure-u-1"><div id="openTill" openHour="8" openMinute="00" closeHour="22" closeMinute="30"></div></div>
+					<div class="details">
+						<div class="pure-g">
+							<div class="pure-u-1-2"><div id="address" id="detail">1920 Fail Dr, Failcity	, WA 99163</div></div>
+							<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 234-4347</div></div>
+							<div class="pure-u-1"><div id="openTill" openHour="8" openMinute="00" closeHour="22" closeMinute="30"></div></div>
+						</div>
 					</div>
 				</div>
 				<div class="result">
@@ -116,10 +127,12 @@
 							<div class="pure-u-1-3"><div id="type">Food</div></div>
 						</div>
 					</div>
-					<div id="details"  class="pure-g">
-						<div class="pure-u-1-2"><div id="address" id="detail">3392 Stadium Way Pullman, WA 99163</div></div>
-						<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 674-7534</div></div>
-						<div class="pure-u-1"><div id="openTill" id="openTill" openHour="8" openMinute="00" closeHour="24" closeMinute="30"></div></div>
+					<div class="details">
+						<div class="pure-g">
+							<div class="pure-u-1-2"><div id="address" id="detail">3392 Stadium Way Pullman, WA 99163</div></div>
+							<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 674-7534</div></div>
+							<div class="pure-u-1"><div id="openTill" id="openTill" openHour="8" openMinute="00" closeHour="24" closeMinute="30"></div></div>
+						</div>
 					</div>
 				</div>
 				<div class="result">
@@ -130,10 +143,12 @@
 							<div class="pure-u-1-3"><div id="type">Food</div></div>
 						</div>
 					</div>
-					<div id="details"  class="pure-g">
-						<div class="pure-u-1-2"><div id="address" id="detail">3392 Main St Pullman, WA 99163</div></div>
-						<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 564-2343</div></div>
-						<div class="pure-u-1"><div id="openTill" openHour="1" openMinute="00" closeHour="24" closeMinute="00"></div></div>
+					<div class="details">
+						<div class="pure-g">
+							<div class="pure-u-1-2"><div id="address" id="detail">3392 Main St Pullman, WA 99163</div></div>
+							<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 564-2343</div></div>
+							<div class="pure-u-1"><div id="openTill" openHour="1" openMinute="00" closeHour="24" closeMinute="00"></div></div>
+						</div>
 					</div>
 				</div>
 		</div>
