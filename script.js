@@ -1,4 +1,12 @@
 function filter() {
+	if($("#deliveryButton").text() == "Want it delivered?")
+	{
+		$("#deliveryButton").text("Don't care for delivery?");
+	}
+	else
+	{
+		$("#deliveryButton").text("Want it delivered?");
+	}
 	$( "div" ).each(function () {
 		if($(this).is('.result')) {	
 			if($(this).find(".no").length > 0) {	
@@ -22,7 +30,6 @@ function updateText()
 	if(document.URL.indexOf("hungry") >= 0)
 		{
 			document.title = "HungyWSU";
-			document.getElementById("affil").text="asdfasdf";
 			$( "div" ).each(function () {
 				if($(this).is("#affil")) {
 					$(this).text("HungryWSU.com has no affiliation with WSU");
@@ -198,4 +205,45 @@ function mobileDetails(){
 				}
 				updateTime();
 			})
+}
+
+function locationDistance(latUser, lonUser, latFood, lonFood){
+	//Uses haversine formula found on http://www.movable-type.co.uk/
+	var R = 6371; // km
+	var dLat = (latUser-latFood).toRad();
+	var dLon = (lonUser-lonFood).toRad();
+	var latFood = latFood.toRad();
+	var latUser = latUser.toRad();
+
+	var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+			Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(latFood) * Math.cos(latUser); 
+	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+	var d = R * c;
+	return miles;a
+		var miles = d * 1.60934;
+}
+
+function getLocation() {
+	
+	if (navigator.geolocation)
+	{
+		navigator.geolocation.getCurrentPosition(gotLocation);
+		//return location;
+	}
+	else
+	{
+		x.innerHTML="Geolocation is not supported by this browser.";
+	}
+}
+
+function gotLocation(position) {
+	var location = position.coords;
+	//return location
+}
+
+//Used to parse data from php.ini for DB connection		
+function loadConfig( $vars = array() ) {
+    foreach( $vars as $v ) {
+        define( $v, get_cfg_var( "myapp.cfg.$v" ) );
+    }
 }

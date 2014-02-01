@@ -3,6 +3,9 @@
 <html>
 <head>
   <title>DrunkWSU</title>
+  <meta name="keywords" content="Pullman, WSU, Cougs, Drunk, Hungry, munchies, drunchies, food, open, delivery">  
+  <meta name="description" content="It's late, and you are hungry. So, what's still open in Pullman?">
+  
   <link rel="shortcut icon" href="wsu.ico">
   <script src="jquery.js"></script>
   <link href="pure.css" rel="stylesheet">
@@ -10,19 +13,11 @@
   <script type="text/javascript">
 	
 	$(document).ready(function() {
-		//closingTime();\
-		updateTime();
-		updateText();
-		$( "#deliveryButton" ).click(function() {filter();});
-				setInterval(function(){updateTime()},60000); //This will be the update interval
-		/*if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-			var mobileURL = "http://m." + document.URL;
-			alert(mobileURL);
-			alert("Mobile!");
-			//window.naviagate(mobileURL);
-			//hideDetails();
-		// some code..
-		}*/
+			//closingTime();\
+			updateTime();
+			updateText();
+			$( "#deliveryButton" ).click(function() {filter();});
+			setInterval(function(){updateTime()},60000); //This will be the update interval
 		});
     </script>
 	<link href="desktop.css" rel="stylesheet">
@@ -31,8 +26,15 @@
 <body>
 	<div id="content">
 	<img id="logo" src="drunk.png"/>
-	
 	<script>
+		
+		if(( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) || $(window).width() < 600) {
+			//var mobileURL = "http://m." + document.URL;
+			//alert(mobileURL);
+			//window.location = "mIndex.php";
+			alert("This will eventually redirect you");
+		};
+		getLocation();
 		updateImage();
 	</script>
 	
@@ -41,8 +43,8 @@
 			
 			<div id="results">
 			<!---
-			<?php  /*
-				$result = mysqli+query();
+			<?php  
+				/*$result = mysqli+query();
 				
 				while($restaurant = mysqli_fetch_array($result))
 				{
@@ -59,11 +61,13 @@
 					}
 					echo '<div class="pure-u-1-3"><div id="' . $restaurant['category'] . '">' . $restaurant['category'] . '</div</div>';
 					echo '</div>';
-					echo '<div id="details" class="pure-g">';
+					echo '<div class="details">';
+					echo '<div class="pure-g">';
 					echo '<div class="pure-u-1-2"><div id="address" id="detail><a href="http://maps.google.com/maps?ie=UTF-8&amp;hl=en&amp;q=' . str_replace(' ', '+', $restaurant['street']) . '%0A' . $restaurant['city'] . '%2C+' . $restaurant['state'] . '+' . $restaurant['zip'] .'">' . $restaurant['street'] . ', ' . $restaurant['city'] . ', ' . $restaurant['state'] . ' ' . $restaurant['zip'] . '</a></div></div>';
 					echo '<div class="pure-u-1-2"><div id="phoneNum">Phone: ' . $restaurant['phone'] . '</div></div>';
 					echo '<div class="pure-u-1-2"><div id="openTill" openHour="' . $restaurant['openHour'] . '" openMinute="' . $restaurant['openMinute'] . '" closeHour="' . $restaurant['closeHour'] . '" closeMinute="' . $restaurant['closeMinute'] . '"></div></div>';
 					echo '</div>';
+					echo '</div>'
 					echo '</div>';
 				}
 			*/?>
