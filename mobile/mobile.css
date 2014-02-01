@@ -1,0 +1,188 @@
+body {
+	background-color: #981e32;
+	font-size: 22px;
+	
+}
+
+#logo {
+	display: block;
+	margin: 0 auto;
+	max-width: 90%;
+	height: auto;
+}
+
+#tagLine {
+	color: #fff;
+	text-align: center;
+	font-family: "Arial Black";
+	font-weight: 800;
+	margin: 30px;
+	margin-top: -10px;
+}
+
+#deliveryButton {
+	background-color: #5e6a71;
+	border-radius: 10px;
+	padding: 10px;
+	width: 225px;
+	margin: 0 auto;	
+	margin-top: 10px;
+	margin-bottom: 20px;
+	color: #fff;
+	font-weight: 800;
+	font-size: 20px;
+	text-align: center;
+}
+
+#content {
+	margin: 0 auto;
+	width: 90%;
+}
+
+#content h1 {
+	text-align: center;
+}
+
+.result {
+	background-color: #fff;
+	margin-bottom: 35px;
+	box-shadow: 5px 5px 10px #000;
+	font-size: 20px;
+}
+
+.summary {
+	color: #fff;
+	background-color: #5e6a71;
+	width: 100%;
+}
+
+#name {
+	font-weight: 800;
+	padding: 15px;
+	padding-left: 20px;
+}
+
+#type {
+	text-align: right;
+	font-weight: 600;
+	padding: 15px;
+	padding-right: 20px;
+}
+
+#address {
+	padding: 10px;
+	padding-left: 20px;
+}
+
+#address a{
+	font-weight: 700;
+	font-weight: 24px;
+}
+
+#phoneNum {
+	text-align: right;
+	padding: 10px;
+	padding-right: 20px;
+}
+
+#website {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#website a{
+	font-weight: 700;
+	font-size: 24px;
+}
+
+#delivers {
+	text-align: center;
+	padding: 10px;
+	font-size: 22px;
+	
+}
+
+.yes {
+	font-weight: 700;
+	font-size: 22px;
+	text-align: center;
+	color: #76EE00;
+	
+}
+
+.no {
+	font-weight: 700;
+	font-size: 22px;
+	text-align: center;
+	color: #000;
+}
+
+#openTill {
+	text-align: center;
+	padding: 25px;
+	padding-bottom: 15px;
+	padding-top: 7px;
+	font-weight: 800;
+	font-size: 24px;
+}
+
+#footer {
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+	background-color: #5e6a71;
+	width: 75%;
+	max-width: 460px;
+	margin: 0 auto;
+	padding: 10px;
+	font-weight: 600;
+	margin-bottom: 25px;
+}
+
+#affil {
+	font-size: inherit;
+}
+
+#policy {
+	padding: 10px;
+}
+	
+#footer h5 {
+	font-weight: 700;
+	margin: 0px;
+	font-size: inherit;
+}
+
+#footer h6 {
+	font-size: inherit;
+	font-weight: 700;
+	margin: 5px;
+}
+
+#footer a {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+#left {
+	text-align: left;
+}
+
+#right {
+	text-align: right;
+}
+
+#footer A:link {color: #FFF;}
+#footer A:visited {color: #F0F;}
+#footer A:active {color: #FFF;}
+#footer A:hover {color: #FF0;}
+
+#website A:link {color: #981e32; text-decoration: none;}
+#website A:visited {color: #981e32; text-decoration: none;}
+#website A:active {color: #981e32; text-decoration: none;}	
+#website A:hover {color: #981e32; text-decoration: none;}
+
+#address A:link {color: #000; text-decoration: none;}
+#address A:visited {color: #000; text-decoration: none;}
+#address A:active {color: #000; text-decoration: none;}	
+#address A:hover {color: #000; text-decoration: none;}
