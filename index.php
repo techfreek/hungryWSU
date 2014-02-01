@@ -24,6 +24,14 @@
 </head>
 
 <body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 	<div id="content">
 	<img id="logo" src="drunk.png"/>
 	<script>
@@ -40,6 +48,8 @@
 	
 	<div id="tagLine">Let's face it, you're hungry. What's still open?</div>
 			<div id="deliveryButton">Want it delivered?</div>
+
+			<div id="facebookButton"><div class="fb-like" data-href="https://www.facebook.com/drunkWSU" data-layout="button_count" data-action="like" data-share="true" data-colorscheme="light" ></div></div>
 			
 			<div id="results">
 			<!---
@@ -48,7 +58,7 @@
 				
 				while($restaurant = mysqli_fetch_array($result))
 				{
-					echo '<div class="result">';
+					echo '<div class="result">;
 					echo '<div id="summary" class="pure-g">';
 					echo '<div class="pure-u-1-3"><div id="name"><a href="' . $restaurant['url'] . '">' . $restaurant['name'] . '</a></div></div>';
 					if( $restaurant['deliver'] == true)

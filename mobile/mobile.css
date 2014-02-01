@@ -1,6 +1,6 @@
 body {
 	background-color: #981e32;
-	font-size: 22px;
+	font-size: 28px;
 	
 }
 
@@ -11,7 +11,7 @@ body {
 	height: auto;
 }
 
-#tagLine {
+#tagLine { 
 	color: #fff;
 	text-align: center;
 	font-family: "Arial Black";
@@ -20,17 +20,25 @@ body {
 	margin-top: -10px;
 }
 
+#facebookButton {
+	width: 124px;
+	clear: both;
+	margin: 0 auto;
+	color: #fff;
+	margin-bottom: 15px;
+}
+
 #deliveryButton {
 	background-color: #5e6a71;
 	border-radius: 10px;
 	padding: 10px;
-	width: 225px;
+	max-width: 300px;
 	margin: 0 auto;	
 	margin-top: 10px;
 	margin-bottom: 20px;
 	color: #fff;
 	font-weight: 800;
-	font-size: 20px;
+	font-size: 24px;
 	text-align: center;
 }
 
@@ -47,7 +55,7 @@ body {
 	background-color: #fff;
 	margin-bottom: 35px;
 	box-shadow: 5px 5px 10px #000;
-	font-size: 20px;
+	font-size: 26px;
 }
 
 .summary {
@@ -76,7 +84,7 @@ body {
 
 #address a{
 	font-weight: 700;
-	font-weight: 24px;
+	font-size: 26px;
 }
 
 #phoneNum {
@@ -92,19 +100,19 @@ body {
 
 #website a{
 	font-weight: 700;
-	font-size: 24px;
+	font-size: 28px;
 }
 
 #delivers {
 	text-align: center;
 	padding: 10px;
-	font-size: 22px;
+	font-size: 26px;
 	
 }
 
 .yes {
 	font-weight: 700;
-	font-size: 22px;
+	font-size: 26px;
 	text-align: center;
 	color: #76EE00;
 	
@@ -112,7 +120,7 @@ body {
 
 .no {
 	font-weight: 700;
-	font-size: 22px;
+	font-size: 26px;
 	text-align: center;
 	color: #000;
 }
@@ -123,12 +131,12 @@ body {
 	padding-bottom: 15px;
 	padding-top: 7px;
 	font-weight: 800;
-	font-size: 24px;
+	font-size: 28px;
 }
 
 #footer {
 	text-align: center;
-	font-size: 16px;
+	font-size: 18px;
 	color: #fff;
 	background-color: #5e6a71;
 	width: 75%;
@@ -160,7 +168,7 @@ body {
 }
 
 #footer a {
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 500;
 }
 

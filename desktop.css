@@ -20,6 +20,15 @@ body {
 	padding-left: 60px;
 }
 
+#facebookButton {
+        width: 124px;
+        clear: both;
+        margin: 0 auto;
+        color: #fff;
+	margin-bottom: 15px;
+}
+
+
 #deliveryButton {
 	background-color: #5e6a71;
 	border-radius: 10px;
