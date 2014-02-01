@@ -31,8 +31,8 @@
 		if(( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) || $(window).width() < 600) {
 			//var mobileURL = "http://m." + document.URL;
 			//alert(mobileURL);
-			window.location = "mIndex.php";
-			alert("This will eventually redirect you");
+			//window.location = "mIndex.php";
+			//alert("This will eventually redirect you");
 		};
 		//getLocation();
 		updateImage();
