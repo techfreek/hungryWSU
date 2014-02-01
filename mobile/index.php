@@ -174,17 +174,7 @@
 				</div>
 		</div>
 		
-		<div id="footer">
-			<div class="pure-g">
-				<div class="pure-u-1"><h5>Created by:</h5></div>
-				<div class="pure-u-1">Alex Bahm and Connor Jackson</div>
-				<div class="pure-u-1"><div id="affil"><h6>DrunkWSU.com has no affiliation with WSU</h6></div></div>
-				<div class="pure-u-1-2" id="left"><a href="mailto:admin@drunkwsu.com?Subject=Web%20Master">Contact the Webmaster</a></div>
-				<div class="pure-u-1-2" id="right"><a href="mailto:admin@drunkwsu.com?Subject=Promotion%20Request">Promote Your Business</a></div>
-				<div class="pure-u-1"><div id="policy">//Privacy Policy//</div></div>
-			</div>
-		</div>
-		
+		<?php include '../footer.php'; ?>		
 		
 	</div>
 	
