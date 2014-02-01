@@ -13,7 +13,7 @@
   <script type="text/javascript">
 	
 	$(document).ready(function() {
-			//closingTime();\
+			//closingTime();
 			updateTime();
 			updateText();
 			$( "#deliveryButton" ).click(function() {filter();});
@@ -34,7 +34,7 @@
 			//window.location = "mIndex.php";
 			alert("This will eventually redirect you");
 		};
-		getLocation();
+		//getLocation();
 		updateImage();
 	</script>
 	
