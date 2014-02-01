@@ -1,13 +1,13 @@
 body {
 	background-color: #981e32;
-	font-size: 16px;
+	font-size: 22px;
 	
 }
 
 #logo {
 	display: block;
 	margin: 0 auto;
-	max-width: 75%;
+	max-width: 90%;
 	height: auto;
 }
 
@@ -30,7 +30,7 @@ body {
 	margin-bottom: 20px;
 	color: #fff;
 	font-weight: 800;
-	font-size: 16px;
+	font-size: 20px;
 	text-align: center;
 }
 
@@ -47,7 +47,7 @@ body {
 	background-color: #fff;
 	margin-bottom: 35px;
 	box-shadow: 5px 5px 10px #000;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 .summary {
@@ -76,6 +76,7 @@ body {
 
 #address a{
 	font-weight: 700;
+	font-weight: 24px;
 }
 
 #phoneNum {
@@ -91,19 +92,19 @@ body {
 
 #website a{
 	font-weight: 700;
-	font-size: 20px;
+	font-size: 24px;
 }
 
 #delivers {
 	text-align: center;
 	padding: 10px;
-	font-size: 20px;
+	font-size: 22px;
 	
 }
 
 .yes {
 	font-weight: 700;
-	font-size: 20px;
+	font-size: 22px;
 	text-align: center;
 	color: #76EE00;
 	
@@ -111,7 +112,7 @@ body {
 
 .no {
 	font-weight: 700;
-	font-size: 20px;
+	font-size: 22px;
 	text-align: center;
 	color: #000;
 }
@@ -122,12 +123,12 @@ body {
 	padding-bottom: 15px;
 	padding-top: 7px;
 	font-weight: 800;
-	font-size: 20px;
+	font-size: 24px;
 }
 
 #footer {
 	text-align: center;
-	font-size: 14px;
+	font-size: 16px;
 	color: #fff;
 	background-color: #5e6a71;
 	width: 75%;
@@ -159,7 +160,7 @@ body {
 }
 
 #footer a {
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: 500;
 }
 
