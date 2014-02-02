@@ -64,6 +64,8 @@ body {
 	background-color: #5e6a71;
 	width: 100%;
 	font-size: 36px;
+	padding-top: 25px;
+	padding-bottom: 25px;
 }
 
 #name {

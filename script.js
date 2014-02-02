@@ -20,9 +20,18 @@ function filter() {
 function updateImage()
 {
 	if(document.URL.indexOf("hungry") >= 0)
+	{
+		var image = new Image();
+		image.src = "hungry.png";
+		if(image.height == 0)
+		{
+			document.getElementById("logo").src="../hungry.png";		
+		}
+		else
 		{
 			document.getElementById("logo").src="hungry.png";
-		}		
+		}
+	}		
 }
 
 function updateText()
