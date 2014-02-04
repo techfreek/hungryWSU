@@ -97,7 +97,7 @@ function updateTime() {
 			
 			if((((timeTillClose[0] * 1440) + (timeTillClose[1] * 60) + (timeTillClose[2]) - 1))< 0)
 			{
-				$(this).parent().parent().parent().remove();
+				$(this).parent().parent().parent().parent().remove();
 			}
 			else
 			{

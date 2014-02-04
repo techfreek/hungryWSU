@@ -52,13 +52,21 @@
 			<div id="facebookButton"><div class="fb-like" data-href="https://www.facebook.com/drunkWSU" data-layout="button_count" data-action="like" data-share="true" data-colorscheme="light" ></div></div>
 			
 			<div id="results">
-			<!---
+
 			<?php  
-				/*$result = mysqli+query();
+				//required_once('../config.php');
+				//try {
+				//	$db = new PDO("mysql:host=$DBHOST;dbname=$DBNAME", $DBUSER, $DBPASS);
+				//}
+				//catch(PDOException $e)
+				//	echo $e->getMessage();
+				//}			
+
+				//$query = 'SELECT * FROM location';
 				
-				while($restaurant = mysqli_fetch_array($result))
+				/*foreach ($db->query($query) as $restaurant)
 				{
-					echo '<div class="result">;
+					echo '<div class="result">';
 					echo '<div id="summary" class="pure-g">';
 					echo '<div class="pure-u-1-3"><div id="name"><a href="' . $restaurant['url'] . '">' . $restaurant['name'] . '</a></div></div>';
 					if( $restaurant['deliver'] == true)
@@ -77,11 +85,11 @@
 					echo '<div class="pure-u-1-2"><div id="phoneNum">Phone: ' . $restaurant['phone'] . '</div></div>';
 					echo '<div class="pure-u-1-2"><div id="openTill" openHour="' . $restaurant['openHour'] . '" openMinute="' . $restaurant['openMinute'] . '" closeHour="' . $restaurant['closeHour'] . '" closeMinute="' . $restaurant['closeMinute'] . '"></div></div>';
 					echo '</div>';
-					echo '</div>'
 					echo '</div>';
-				}
-			*/?>
-			-->
+					echo '</div>';
+				}*/
+			?>
+			
 			
 				<div class="result">
 					<!--Add timestamp that displays today's closing time-->
@@ -161,7 +169,7 @@
 						<div class="pure-g">
 							<div class="pure-u-1-2"><div id="address" id="detail">3392 Main St Pullman, WA 99163</div></div>
 							<div class="pure-u-1-2"><div id="phoneNum">Phone: (425) 564-2343</div></div>
-							<div class="pure-u-1"><div id="openTill" openHour="1" openMinute="00" closeHour="24" closeMinute="00"></div></div>
+							<div class="pure-u-1"><div id="openTill" openHour="1" openMinute="00" closeHour="23" closeMinute="00"></div></div>
 						</div>
 					</div>
 				</div>
