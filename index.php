@@ -54,6 +54,11 @@
 			<div id="results">
 
 			<?php  
+				$time = new DateTime::CreateFromFormat("Y-m-d H:i:s", "011-07-26 20:05:00");
+				$day = date( "w", $timestamp);
+				$hour= $time->format('H');
+				$min = $time->format('i');
+				
 				include('../config.php');
 
 				try {
@@ -63,8 +68,18 @@
 					echo $e->getMessage();
 				}			
 
-				$query = 'SELECT * FROM location';
+				$oldQuery = 'SELECT * FROM location;';
 				
+				$otherQuery = 'SELECT * FROM location INNER JOIN times ON location.id = times.location;';
+				
+				$query = 'SELECT * 
+								FROM location
+								INNER JOIN times
+								ON location.id = times.location
+								WHERE day = $day
+								AND openHour > $hour
+								OR (openHour == $hour AND openMin <= $min);';
+										
 				foreach ($db->query($query) as $restaurant)
 				{
 					echo '<div class="result">';
