@@ -54,17 +54,18 @@
 			<div id="results">
 
 			<?php  
-				//required_once('../config.php');
-				//try {
-				//	$db = new PDO("mysql:host=$DBHOST;dbname=$DBNAME", $DBUSER, $DBPASS);
-				//}
-				//catch(PDOException $e)
-				//	echo $e->getMessage();
-				//}			
+				include('../config.php');
 
-				//$query = 'SELECT * FROM location';
+				try {
+					$db = new PDO("mysql:host=$DBHOST;dbname=$DBNAME", $DBUSER, $DBPASS);
+				}
+					catch(PDOException $e)
+					echo $e->getMessage();
+				}			
+
+				$query = 'SELECT * FROM location';
 				
-				/*foreach ($db->query($query) as $restaurant)
+				foreach ($db->query($query) as $restaurant)
 				{
 					echo '<div class="result">';
 					echo '<div id="summary" class="pure-g">';
@@ -87,7 +88,7 @@
 					echo '</div>';
 					echo '</div>';
 					echo '</div>';
-				}*/
+				}
 			?>
 			
 			
