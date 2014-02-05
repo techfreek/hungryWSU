@@ -1,4 +1,12 @@
 function filter() {
+	if($("#deliveryButton").text() == "Want it delivered?")
+	{
+		$("#deliveryButton").text("Don't care for delivery?");
+	}
+	else
+	{
+		$("#deliveryButton").text("Want it delivered?");
+	}
 	$( "div" ).each(function () {
 		if($(this).is('.result')) {	
 			if($(this).find(".no").length > 0) {	
@@ -9,13 +17,28 @@ function filter() {
 	});
 }
 
-function domainNameCheck()
+function updateImage()
+{
+	if(document.URL.indexOf("hungry") >= 0)
+	{
+		var image = new Image();
+		image.src = "hungry.png";
+		if(image.height == 0)
+		{
+			document.getElementById("logo").src="../hungry.png";		
+		}
+		else
+		{
+			document.getElementById("logo").src="hungry.png";
+		}
+	}		
+}
+
+function updateText()
 {
 	if(document.URL.indexOf("hungry") >= 0)
 		{
 			document.title = "HungyWSU";
-			document.getElementById("logo").src="hungry.png";
-			document.getElementById("affil").text="asdfasdf";
 			$( "div" ).each(function () {
 				if($(this).is("#affil")) {
 					$(this).text("HungryWSU.com has no affiliation with WSU");
@@ -74,7 +97,7 @@ function updateTime() {
 			
 			if((((timeTillClose[0] * 1440) + (timeTillClose[1] * 60) + (timeTillClose[2]) - 1))< 0)
 			{
-				$(this).parent().parent().parent().remove();
+				$(this).parent().parent().parent().parent().remove();
 			}
 			else
 			{
@@ -167,7 +190,7 @@ function dateTime() {
 
 function hideDetails() {
 	$( "div" ).each(function (i) {
-		if($(this).is('#details')) {	
+		if($(this).is('.details')) {	
 			$(this).hide();
 		}
 	});
@@ -175,16 +198,61 @@ function hideDetails() {
 
 function mobileDetails(){
 	$(".summary").click(function() {
-				//alert($(this).find("#details").css('display'));
-				if($(this).parent().find("#details").css('display') == "none")
+				//alert($(this).find(".details").css('display'));
+				$(".details").each(function() {
+					$(this).slideUp();
+				});
+				
+				if($(this).parent().find(".details").css('display') == "none")
 				{
 					
-					$(this).parent().find("#details").slideDown();
+					$(this).parent().find(".details").slideDown();
 				}
 				else
 				{
-					$(this).parent().find("#details").slideUp();
+					$(this).parent().find(".details").slideUp();
 				}
 				updateTime();
 			})
 }
+
+function locationDistance(latUser, lonUser, latFood, lonFood){
+	//Uses haversine formula found on http://www.movable-type.co.uk/
+	var R = 6371; // km
+	var dLat = (latUser-latFood).toRad();
+	var dLon = (lonUser-lonFood).toRad();
+	var latFood = latFood.toRad();
+	var latUser = latUser.toRad();
+
+	var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+			Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(latFood) * Math.cos(latUser); 
+	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+	var d = R * c;
+	return miles;a
+		var miles = d * 1.60934;
+}
+
+function getLocation() {
+	
+	if (navigator.geolocation)
+	{
+		navigator.geolocation.getCurrentPosition(gotLocation);
+		//return location;
+	}
+	else
+	{
+		x.innerHTML="Geolocation is not supported by this browser.";
+	}
+}
+
+function gotLocation(position) {
+	var location = position.coords;
+	//return location
+}
+
+//Used to parse data from php.ini for DB connection		
+/*function loadConfig( $vars = array() ) {
+    foreach( $vars as $v ) {
+        define( $v, get_cfg_var( "myapp.cfg.$v" ) );
+    }
+}*/
