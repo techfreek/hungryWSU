@@ -88,9 +88,9 @@
 						echo '<div class="result">';
 						echo '<div class="summary">';
 						echo '<div class="pure-g">';
-						if($restaurant['sponsor'] == 1)
+						if($restaurant['sponsored'] == 1)
 						{
-							echo '<div class="pure-u-1-2"><div id="name"><img class="promoStar" alt="Sponsored Result" src="whitePromo.png">' . $restaurant['name'] . '</div></div>';
+							echo '<div class="pure-u-1-2"><div id="name"><img class="promoStar" alt="Sponsored Result" src="../whitePromo.png">' . $restaurant['name'] . '</div></div>';
 						}
 						else
 						{
@@ -111,7 +111,7 @@
 						{
 							echo '<div class="pure-u-1"><div class="no">We don\'t deliver :(</div></div>';
 						}
-						echo 'div class="pure-u-1"><div id="website"><a href="' . $restaurant['website'] . '>' . $restaurant['name'] .'\'s Website</a></div></div>';
+						echo '<div class="pure-u-1"><div id="website"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] .'\'s Website</a></div></div>';
 						echo '<div class="pure-u-1"><div id="openTill" openHour="' . $restaurant['openHour'] . '" openMin="' . $restaurant['openMin'] . '" closeHour="' . $restaurant['closeHour'] . '" closeMinute="' . $restaurant['closeMin'] . '"></div></div>';
 						echo '</div>';
 						echo '</div>';
