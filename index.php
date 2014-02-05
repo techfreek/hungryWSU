@@ -81,7 +81,8 @@
 								INNER JOIN times
 								ON location.id = times.location
 								WHERE day =$day
-									AND ((openHour < $hour) OR ((openHour = $hour) AND (openMin >= $min)))";
+									AND ((openHour < $hour) OR ((openHour = $hour) AND (openMin >= $min)))
+								ORDER BY sponsored DESC';
 										
 				$results = $db->query($query);
 
