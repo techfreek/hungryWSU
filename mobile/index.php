@@ -140,13 +140,17 @@
 							{
 								echo '<div class="pure-u-1"><div class="no">We don\'t deliver :(</div></div>';
 							}
-							echo '<div class="pure-u-1"><div id="website"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] .'\'s Website</a></div></div>';
+							if($restaurant['website'] != null)
+							{
+								echo '<div class="pure-u-1"><div id="website"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] .'\'s Website</a></div></div>';
+							}
 							echo '<div class="pure-u-1"><div id="openTill" openHour="' . $restaurant['openHour'] . '" openMin="' . $restaurant['openMin'] . '" closeHour="' . $restaurant['closeHour'] . '" closeMinute="' . $restaurant['closeMin'] . '"></div></div>';
 							echo '</div>';
 							echo '</div>';
 							echo '</div>';
 						}
 					} 					
+					$db = null;
 				?>
 		</div>
 		

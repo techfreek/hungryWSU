@@ -124,11 +124,27 @@
 						echo '<div class="pure-g">';
 						if($restaurant['sponsored'] == 1)
 						{
-							echo '<div class="pure-u-1-3"><div id="name"><img class="promoStar" alt="Sponsored Result" src="whitePromo.png"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] . '</a></div></div>';
+							if($restaurant['website'] != null)
+							{
+								echo '<div class="pure-u-1-3"><div id="name"><img class="promoStar" alt="Sponsored Result" src="whitePromo.png"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] . '</a></div></div>';
+							}
+							else
+							{
+								echo '<div class="pure-u-1-3"><div id="name"><img class="promoStar" alt="Sponsored Result" src="whitePromo.png">' . $restaurant['name'] . '</div></div>';
+							}
+							
 						}
 						else
 						{
-							echo '<div class="pure-u-1-3"><div id="name"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] . '</a></div></div>';
+							if($restaurant['website'] != null)
+							{
+								echo '<div class="pure-u-1-3"><div id="name"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] . '</a></div></div>';
+							}
+							else
+							{
+									echo '<div class="pure-u-1-3"><div id="name">:wq
+									' . $restaurant['name'] . '</div></div>';
+							}
 						}
 						if( $restaurant['delivers'] == 1)
 						{
@@ -151,6 +167,7 @@
 						echo '</div>';
 					}
 				}
+				$db = null;
 			?>
 		</div>
 		
