@@ -170,6 +170,12 @@ body {
 	padding: 35px;
 }
 
+.promoStar {
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 20px;
+	height: auto;
+}
 
 #footer A:link {color: #FFF;}
 #footer A:visited {color: #F0F;}

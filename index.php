@@ -91,7 +91,14 @@
 					echo '<div class="result">';
 					echo '<div class="summary">';
 					echo '<div class="pure-g">';
-					echo '<div class="pure-u-1-3"><div id="name"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] . '</a></div></div>';
+					if($restaurant['sponsor'] == 1)
+					{
+						echo '<div class="pure-u-1-3"><div id="name"><img class="promoStar" alt="Sponsored Result" src="whitePromo.png"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] . '</a></div></div>';
+					}
+					else
+					{
+						echo '<div class="pure-u-1-3"><div id="name"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] . '</a></div></div>';
+					}
 					if( $restaurant['deliver'] == 1)
 					{
 						echo '<div class="pure-u-1-3"><div class="yes">We\'ll deliver!</div></div>';

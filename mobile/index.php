@@ -54,38 +54,82 @@
 			<div id="facebookButton"><div class="fb-like" data-href="https://www.facebook.com/drunkWSU" data-layout="button_count" data-action="like" data-share="true" data-colorscheme="light" ></div></div>
 			
 			<div id="results">
-				<!--<?php  /*
-				$result = mysqli+query();
-				while($restaurant = mysqli_fetch_array($result))
-				{
-					echo '<div class="result">';
-					echo '<div id="summary" class="pure-g">';
-					echo '<div class="pure-u-1-2"><div id="name">' .$restaurant['name']  . '</div></div>';
+				<?php  
+					$db_conn = parse_ini_file("../../config.ini");
+					date_default_timezone_set('America/Los_Angeles');
+					$date = date('m/d/Y h:i:s a', time());				
+					//print_r($date);
 					
-					echo '<div class="pure-u-1-2"><div id="category">' . $restaurant['category'] . '</div</div>';
-					echo '</div>';
-					echo '<div class="details">';
-					echo '<div class="pure-g">';
-					echo '<div class="pure-u-1-2"><div id="address" id="detail><a href="http://maps.google.com/maps?ie=UTF-8&amp;hl=en&amp;q=' . str_replace(' ', '+', $restaurant['street']) . '%0A' . $restaurant['city'] . '%2C+' . $restaurant['state'] . '+' . $restaurant['zip'] .'">' . $restaurant['street'] . ', ' . $restaurant['city'] . ', ' . $restaurant['state'] . ' ' . $restaurant['zip'] . '</a></div></div>';
-					echo '<div class="pure-u-1-2"><div id="phoneNum">Phone: ' . $restaurant['phone'] . '</div></div>';
-					if( $restaurant['deliver'] == true)
+					$day = date("w");
+					$hour= date("H");
+					$min = date("i");
+
+					try 
 					{
-						echo '<div class="pure-u-1"><div class="yes">We\'ll deliver!</div></div>';
+						$db = new PDO("mysql:host=$db_conn[DBHOST];dbname=$db_conn[DBNAME]", $db_conn[DBUSER], $db_conn[DBPASS]);
 					}
-					else
+					catch(PDOException $e)
 					{
-						echo '<div class="pure-u-1"><div class="no">We don\'t deliver :(</div></div>';
+						echo $e->getMessage();
 					}
-					if( $restaurant['url'] != null)
+					
+					$query = "SELECT * 
+									FROM location
+									INNER JOIN times
+									ON location.id = times.location
+									WHERE day =$day
+										AND ((openHour < $hour) OR ((openHour = $hour) AND (openMin >= $min)))
+									ORDER BY sponsored DESC";
+											
+					$results = $db->query($query);
+
+					foreach ($results as $restaurant)
 					{
-						echo '<div class="pure-u-1"><div id="website"><a href="' . $restaurant['url'] . '"> Visit website </a></div></div>';
+						echo '<div class="result">';
+						echo '<div class="summary">';
+						echo '<div class="pure-g">';
+						if($restaurant['sponsor'] == 1)
+						{
+							echo '<div class="pure-u-1-2"><div id="name"><img class="promoStar" alt="Sponsored Result" src="whitePromo.png">' . $restaurant['name'] . '</div></div>';
+						}
+						else
+						{
+							echo '<div class="pure-u-1-2"><div id="name">' . $restaurant['name'] . '</div></div>';
+						}
+						echo '<div class="pure-u-1-2"><div id="type">' . $restaurant['category'] . '</div></div>';
+						echo '</div>';
+						echo '</div>';
+						echo '<div class="details">';
+						echo '<div class="pure-g">';
+						echo '<div class="pure-u-1-2"><div id="address" id="detail"><a href="http://maps.google.com/maps?ie=UTF-8&amp;hl=en&amp;q=' . str_replace(' ', '+', $restaurant['address']) . '%0A' . $restaurant['city'] . '%2C+' . $restaurant['state'] . '+' . $restaurant['zip'] .'">' . $restaurant['address'] . ', ' . $restaurant['city'] . ', ' . $restaurant['state'] . ' ' . $restaurant['zip'] . '</a></div></div>';
+						echo '<div class="pure-u-1-2"><div id="phoneNum">Phone: ' . $restaurant['phoneNumber'] . '</div></div>';
+						if( $restaurant['deliver'] == 1)
+						{
+							echo '<div class="pure-u-1"><div class="yes">We\'ll deliver!</div></div>';
+						}
+						else
+						{
+							echo '<div class="pure-u-1"><div class="no">We don\'t deliver :(</div></div>';
+						}
+						echo 'div class="pure-u-1"><div id="website"><a href="' . $restaurant['website'] . '>' . $restaurant['name'] .'\'s Website</a></div></div>';
+						echo '<div class="pure-u-1"><div id="openTill" openHour="' . $restaurant['openHour'] . '" openMin="' . $restaurant['openMin'] . '" closeHour="' . $restaurant['closeHour'] . '" closeMinute="' . $restaurant['closeMin'] . '"></div></div>';
+						echo '</div>';
+						echo '</div>';
+						echo '</div>';
 					}
-					echo '<div class="pure-u-1"><div id="openTill" openHour="' . $restaurant['openHour'] . '" openMinute="' . $restaurant['openMinute'] . '" closeHour="' . $restaurant['closeHour'] . '" closeMinute="' . $restaurant['closeMinute'] . '"></div></div>';
-					echo '</div>';
-					echo '</div>'
-					echo '</div>';
-				}
-			*/?>-->
+					if(count($results) == 0)
+					{
+						echo '<div class="result">';
+						echo '<div class="summary">';
+						echo '<div class="pure-g">';
+						echo '<div class="pure-u-1">';					
+						echo 'div id="noResults">I guess nothing is open in Pullman..."</div>';
+						echo '</div>';
+						echo '</div>';
+						echo '</div>';
+						echo '</div>';
+					}
+				?>
 				<div class="result">
 					<!--Add timestamp that displays today's closing time-->
 					<div class="summary">
