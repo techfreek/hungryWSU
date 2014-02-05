@@ -99,7 +99,7 @@
 					{
 						echo '<div class="pure-u-1-3"><div id="name"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] . '</a></div></div>';
 					}
-					if( $restaurant['deliver'] == 1)
+					if( $restaurant['delivers'] == 1)
 					{
 						echo '<div class="pure-u-1-3"><div class="yes">We\'ll deliver!</div></div>';
 					}
