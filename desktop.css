@@ -6,6 +6,7 @@ body {
 #logo {
 	display: block;
 	margin: 0 auto;
+	margin-top: 10px;
 	width: 372px;
 	height: auto;
 }
@@ -19,6 +20,15 @@ body {
 	margin-top: -20px;
 	padding-left: 60px;
 }
+
+#facebookButton {
+        width: 124px;
+        clear: both;
+        margin: 0 auto;
+        color: #fff;
+	margin-bottom: 15px;
+}
+
 
 #deliveryButton {
 	background-color: #5e6a71;
@@ -152,6 +162,14 @@ body {
 #right {
 	text-align: right;
 }
+
+#noResults {
+	color: #fff;
+	font-size: 36px;
+	font-weight: 800;
+	padding: 35px;
+}
+
 
 #footer A:link {color: #FFF;}
 #footer A:visited {color: #F0F;}
