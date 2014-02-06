@@ -54,7 +54,8 @@
 			<div id="results">
 
 			<?php  
-				//print "Here!\n";
+				//print "Here!\n
+				include("time.php");
 				$db_conn = parse_ini_file("../config.ini");
 				date_default_timezone_set('America/Los_Angeles');
 				$date = date('m/d/Y h:i:s a', time());				
@@ -100,23 +101,11 @@
 				{
 					foreach ($results as $restaurant)
 					{
-						if($restaurant['closeHour'] < $restaurant['openHour'])
-						{
-							$tempClose = $restaurant['closeHour'] + 24;
-							$tempHour = $hour + 24;
-						}
-						else
-						{
-							$tempClose = $restaurant['closeHour'];
-							$tempHour = $hour;
-						}
-						if(($tempHour > $restaurant['closeHour']) or (($tempHour == $restaurant['closeHour']) && ($min > $restaurant['closeMin'])))
-						{ //sees if it past closing time
-							if(($hour < $restaurant['openHour']) or (($hour ==$restaurant['openHour']) && ($min < $restaurant['openMin']))) //sees if it has opened yet
+						
+						if(! isOpen($hour, $min, $restaurant['openHour'], $restaurant['openMin'], $restaurant['closeHour'], $restaurant['closeMin'])
 							{
 								continue;
 							}
-						}
 						
 						
 						echo '<div class="result">';
