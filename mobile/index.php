@@ -109,7 +109,7 @@
 							}
 							if(($tempHour > $restaurant['closeHour']) or (($tempHour == $restaurant['closeHour']) && ($min > $restaurant['closeMin'])))
 							{ //sees if it past closing time
-								if(($tempHour < $restaurant['openHour']) or (($tempHour ==$restaurant['openHour']) && ($min < $restaurant['openMin']))) //sees if it has opened yet
+								if(($hour < $restaurant['openHour']) or (($hour ==$restaurant['openHour']) && ($min < $restaurant['openMin']))) //sees if it has opened yet
 								{
 									continue;
 								}
