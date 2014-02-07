@@ -251,7 +251,6 @@ function getLocation() {
 
 function gotLocation(position) {
 	var myLocation = position.coords;
-	alert(myLocation.latitude + " " +  myLocation.longitude);
 	displayDistance(myLocation.latitude, myLocation.longitude);
 }
 

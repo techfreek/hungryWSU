@@ -100,8 +100,7 @@
 						{
 							if(! (isOpen($hour, $min, $restaurant['openHour'], $restaurant['openMin'], $restaurant['closeHour'], $restaurant['closeMin'])))
 							{
-								echo $restaurant['name'];
-							//	continue;
+								continue;
 							}
 							
 							echo '<div class="result">';
