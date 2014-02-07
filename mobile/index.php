@@ -79,7 +79,7 @@
 								INNER JOIN times
 								ON location.id = times.location
 								WHERE day = $day
-								ORDER BY sponsored DESC";
+								ORDER BY sponsored DESC, uuid()";
 										
 					$results = $db->query($query);
 					if(count($results) == 0)

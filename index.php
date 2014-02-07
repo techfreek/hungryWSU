@@ -90,7 +90,7 @@
 								INNER JOIN times
 								ON location.id = times.location
 								WHERE day =$day
-								ORDER BY sponsored DESC";
+								ORDER BY sponsored DESC, uuid()";
 					
 				//print("here1");
 				
