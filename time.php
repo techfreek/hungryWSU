@@ -1,7 +1,11 @@
 <?php
 
-function isOpen($hour, $min, $openHour, $openMin, $closeHour, $closeMin)
+function isOpen($hour, $min, $openHour, $openMin, $closeHour, $closeMin, $alwaysOpen)
 {
+	if($alwaysOpen == 1)
+	{
+		return true;
+	}
 	$lateClosing = false;
 	$closeHourTemp = $closeHour;
 	$closeMinTemp = $closeMin;
