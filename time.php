@@ -8,14 +8,15 @@ function isOpen($hour, $min, $openHour, $openMin, $closeHour, $closeMin)
 	if($closeHour < $openHour)
 	{ //Needs to recognize if it "closes" before it opens according to the clock
 		$lateClosing = true;
+		$closeHourTemp += 24;
 	}
 	
 	if($lateClosing and lessThanTime($hour, $min, $closeHour, $closeMin) and greaterThanTime($hour, $min, 0, 0))
 	{ //needs to adjust how the time looks if it is after midnight so it does not auto think it is closed. 
 		//First checks if it closes late, is before closing, and after midnight
 		$hour += 24;
-		$closeHourTemp += 24;
 	}
+	
 	if(greaterThanTime($hour, $min, $openHour, $openMin) and lessThanTime($hour, $min, $closeHourTemp, $closeMinTemp))
 	{
 		return true;

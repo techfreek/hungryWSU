@@ -216,20 +216,25 @@ function mobileDetails(){
 			})
 }
 
+function toRad(Value) {
+    /** Converts numeric degrees to radians */
+    return Value * Math.PI / 180;
+}
+
 function locationDistance(latUser, lonUser, latFood, lonFood){
 	//Uses haversine formula found on http://www.movable-type.co.uk/
 	var R = 6371; // km
-	var dLat = (latUser-latFood).toRad();
-	var dLon = (lonUser-lonFood).toRad();
-	var latFood = latFood.toRad();
-	var latUser = latUser.toRad();
+	var dLat = toRad(latUser-latFood);
+	var dLon = toRad(lonUser-lonFood);
+	var latFood = toRad(latFood);
+	var latUser = toRad(latUser);
 
 	var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
 			Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(latFood) * Math.cos(latUser); 
 	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
 	var d = R * c;
-	return miles;a
-		var miles = d * 1.60934;
+	var miles = d * 0.651371;
+	return miles;
 }
 
 function getLocation() {
@@ -237,7 +242,6 @@ function getLocation() {
 	if (navigator.geolocation)
 	{
 		navigator.geolocation.getCurrentPosition(gotLocation);
-		//return location;
 	}
 	else
 	{
@@ -246,9 +250,34 @@ function getLocation() {
 }
 
 function gotLocation(position) {
-	var location = position.coords;
-	alert(location);
-	return location
+	var myLocation = position.coords;
+	alert(myLocation.latitude + " " +  myLocation.longitude);
+	displayDistance(myLocation.latitude, myLocation.longitude);
+}
+
+function displayDistance(myLatitude, myLongitude)
+{
+	var distance;
+	var string;
+
+	$( ".distance" ).each(function() {
+		if($(this).is('.distance')) {
+			var longitude  = parseFloat($(this).attr('long'));
+        	        var latitude = parseFloat($(this).attr('lat'));
+	                distance = locationDistance(myLatitude, myLongitude, latitude, longitude);
+			var roundedDistance = (Math.round(distance * 10) / 10);
+			if(roundedDistance == 1)
+			{
+				string = "~" + (Math.round(distance * 10) / 10) + " mile away";
+			}
+			else
+			{
+				string = "~" + (Math.round(distance * 10) / 10) + " miles away";
+			}
+        	        $(this).text(string);
+	
+		}
+	});
 }
 
 //Used to parse data from php.ini for DB connection		

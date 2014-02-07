@@ -55,13 +55,19 @@
 			<div id="results">
 
 			<?php  
-				//print "Here!\n
+				ini_set('display_errors', 'On');
+				error_reporting(E_ALL | E_STRICT);
+				//print "Here!\n";
 				include("time.php");
+
 				$db_conn = parse_ini_file("../config.ini");
 				date_default_timezone_set('America/Los_Angeles');
 				$date = date('m/d/Y h:i:s a', time());				
-				//print_r($date);
-				
+				//print_r($db_conn["DBHOST"]);
+					
+				//print("here");			
+
+	
 				$day = date("w");
 				$hour= date("H");
 				$min = date("i");
@@ -71,11 +77,12 @@
 
 				try 
 				{
-					$db = new PDO("mysql:host=$db_conn[DBHOST];dbname=$db_conn[DBNAME]", $db_conn[DBUSER], $db_conn[DBPASS]);
+					$db = new PDO("mysql:host=$db_conn[DBHOST];dbname=$db_conn[DBNAME]", $db_conn["DBUSER"], $db_conn["DBPASS"]);
 				}
 				catch(PDOException $e)
 				{
 					echo $e->getMessage();
+					echo "ERROR!";
 				}
 				
 				$query = "SELECT * 
@@ -83,9 +90,17 @@
 								INNER JOIN times
 								ON location.id = times.location
 								WHERE day =$day
-								ORDER BY sponsored DESC, uuid()";
-										
+								ORDER BY sponsored DESC";
+					
+				//print("here1");
+				
+					
 				$results = $db->query($query);
+				
+				//var_dump($results);
+				//print("here!\n");
+				
+
 				if(count($results) == 0)
 				{
 					echo '<div class="result">';
@@ -102,11 +117,12 @@
 				{
 					foreach ($results as $restaurant)
 					{
+						//print("here2");	
 						
-						if(! isOpen($hour, $min, $restaurant['openHour'], $restaurant['openMin'], $restaurant['closeHour'], $restaurant['closeMin'])
-							{
-								continue;
-							}
+						if(! (isOpen($hour, $min, $restaurant['openHour'], $restaurant['openMin'], $restaurant['closeHour'], $restaurant['closeMin'])))
+						{
+							continue;
+						}
 						
 						
 						echo '<div class="result">';

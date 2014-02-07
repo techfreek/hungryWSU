@@ -197,6 +197,11 @@ body {
 }
 
 
+.distance {
+	text-align: center;
+	padding: 15px;
+}
+
 #footer A:link {color: #FFF;}
 #footer A:visited {color: #F0F;}
 #footer A:active {color: #FFF;}

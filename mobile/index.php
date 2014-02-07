@@ -19,7 +19,6 @@
 		mobileDetails();
 		hideDetails();
 		updateText();
-		getLocation();
 	});
 	
 	</script>
@@ -79,8 +78,8 @@
 								FROM location
 								INNER JOIN times
 								ON location.id = times.location
-								WHERE day =$day
-								ORDER BY sponsored DESC, uuid()";
+								WHERE day = $day
+								ORDER BY sponsored DESC";
 										
 					$results = $db->query($query);
 					if(count($results) == 0)
@@ -99,9 +98,10 @@
 					{
 						foreach ($results as $restaurant)
 						{
-							if(! isOpen($hour, $min, $restaurant['openHour'], $restaurant['openMin'], $restaurant['closeHour'], $restaurant['closeMin'])
+							if(! (isOpen($hour, $min, $restaurant['openHour'], $restaurant['openMin'], $restaurant['closeHour'], $restaurant['closeMin'])))
 							{
-								continue;
+								echo $restaurant['name'];
+							//	continue;
 							}
 							
 							echo '<div class="result">';
@@ -109,13 +109,14 @@
 							echo '<div class="pure-g">';
 							if($restaurant['sponsored'] == 1)
 							{
-								echo '<div class="pure-u-1-2"><div id="name"><img class="promoStar" alt="Sponsored Result" src="../whitePromo.png">' . $restaurant['name'] . '</div></div>';
+								echo '<div class="pure-u-1-3"><div id="name"><img class="promoStar" alt="Sponsored Result" src="../whitePromo.png">' . $restaurant['name'] . '</div></div>';
 							}
 							else
 							{
-								echo '<div class="pure-u-1-2"><div id="name">' . $restaurant['name'] . '</div></div>';
+								echo '<div class="pure-u-1-3"><div id="name">' . $restaurant['name'] . '</div></div>';
 							}
-							echo '<div class="pure-u-1-2"><div id="type">' . $restaurant['category'] . '</div></div>';
+							echo '<div class="pure-u-1-3"><div class="distance" long="' . $restaurant['longitude'] . '" lat="' . $restaurant['latitude'] . '"></div></div>';
+							echo '<div class="pure-u-1-3"><div id="type">' . $restaurant['category'] . '</div></div>';
 							echo '</div>';
 							echo '</div>';
 							echo '<div class="details">';
@@ -142,6 +143,9 @@
 					} 					
 					$db = null;
 				?>
+				<script>
+					getLocation();
+				</script>
 		</div>
 		
 		<?php include '../footer.php'; ?>		
