@@ -247,7 +247,8 @@ function getLocation() {
 
 function gotLocation(position) {
 	var location = position.coords;
-	//return location
+	alert(location);
+	return location
 }
 
 //Used to parse data from php.ini for DB connection		
