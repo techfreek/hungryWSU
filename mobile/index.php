@@ -98,7 +98,7 @@
 					{
 						foreach ($results as $restaurant)
 						{
-							if(! (isOpen($hour, $min, $restaurant['openHour'], $restaurant['openMin'], $restaurant['closeHour'], $restaurant['closeMin'])))
+							if(! (isOpen($hour, $min, $restaurant['openHour'], $restaurant['openMin'], $restaurant['closeHour'], $restaurant['closeMin'], $restaurant['alwaysOpen'])))
 							{
 								continue;
 							}
@@ -132,9 +132,20 @@
 							}
 							if($restaurant['website'] != null)
 							{
-								echo '<div class="pure-u-1"><div id="website"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] .'\'s Website</a></div></div>';
+								if(substr($restraunt['name']), -2) == "\'s")
+								{
+									echo '<div class="pure-u-1"><div id="website"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] .' Website</a></div></div>';
+								}
+								else if(substr($restraunt['name']), -2) == "s")
+								{
+									echo '<div class="pure-u-1"><div id="website"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] .'\' Website</a></div></div>';
+								}
+								else
+								{
+									echo '<div class="pure-u-1"><div id="website"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] .'\'s Website</a></div></div>';
+								}
 							}
-							echo '<div class="pure-u-1"><div id="openTill" openHour="' . $restaurant['openHour'] . '" openMin="' . $restaurant['openMin'] . '" closeHour="' . $restaurant['closeHour'] . '" closeMinute="' . $restaurant['closeMin'] . '"></div></div>';
+							echo '<div class="pure-u-1"><div id="openTill" openHour="' . $restaurant['openHour'] . '" openMin="' . $restaurant['openMin'] . '" closeHour="' . $restaurant['closeHour'] . '" closeMinute="' . $restaurant['closeMin'] . '" alwaysOpen="' . $restaurant['alwaysOpen'] . '"></div></div>';
 							echo '</div>';
 							echo '</div>';
 							echo '</div>';

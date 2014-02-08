@@ -72,6 +72,7 @@ body {
 	font-weight: 800;
 	padding: 15px;
 	padding-left: 20px;
+	vertical-align: middle;
 }
 
 #type {
@@ -79,6 +80,7 @@ body {
 	font-weight: 600;
 	padding: 15px;
 	padding-right: 20px;
+	vertical-align: middle;
 }
 
 #address {
@@ -200,6 +202,7 @@ body {
 .distance {
 	text-align: center;
 	padding: 15px;
+	vertical-align: middle;
 }
 
 #footer A:link {color: #FFF;}

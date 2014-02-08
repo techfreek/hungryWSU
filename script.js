@@ -53,25 +53,33 @@ function closingTime(timeTillClose) {
 			var openHour = parseInt($(this).attr('openHour'), 10);
 			var closeHour = parseInt($(this).attr('closeHour'), 10);
 			var closeMin = parseInt($(this).attr('closeMinute'), 10);
+			var alwaysOpen = parseInt($(this).attr('alwaysOpen'), 10);
 			
-			if(openHour > closeHour)
-			{
-				closeHour += 24;
-			}
-
-			var timeTillClose = calculateTime(closeHour, closeMin);
-			
-			//alert("TimeTillClose: " + timeTillClose);
-			
-			if(timeTillClose[1] < 1){	
-				$(this).css("color", "red");
-			}
-			/*else if(timeTillClose[1] > 9 ) {
-				$(this).css("color", "#32C14C");
-			}*/
-			else
+			if(alwaysOpen == 1)
 			{
 				$(this).css("color", "#000");
+			}
+			else
+			{
+				if(openHour > closeHour)
+				{
+					closeHour += 24;
+				}
+
+				var timeTillClose = calculateTime(closeHour, closeMin);
+				
+				//alert("TimeTillClose: " + timeTillClose);
+				
+				if(timeTillClose[1] < 1){	
+					$(this).css("color", "red");
+				}
+				/*else if(timeTillClose[1] > 9 ) {
+					$(this).css("color", "#32C14C");
+				}*/
+				else
+				{
+					$(this).css("color", "#000");
+				}
 			}
 		}
 	});
@@ -85,6 +93,7 @@ function updateTime() {
 			var openHour = parseInt($(this).attr('openHour'), 10);
 			var closeHour = parseInt($(this).attr('closeHour'), 10);
 			var closeMin = parseInt($(this).attr('closeMinute'), 10);
+			var alwaysOpen = parseInt($(this).attr('alwaysOpen'), 10);
 			var timeTillClose= new Array();	
 			
 			if((openHour > closeHour) && (currentTime[1] > closeHour))
@@ -92,7 +101,7 @@ function updateTime() {
 				closeHour += 24;
 			}
 			
-			timeTillClose = calculateTime(closeHour, closeMin);
+			timeTillClose = calculateTime(closeHour, closeMin, alwaysOpen);
 				//alert("TimeTillClose: " + timeTillClose);
 			
 			if((((timeTillClose[0] * 1440) + (timeTillClose[1] * 60) + (timeTillClose[2]) - 1))< 0)
@@ -110,12 +119,12 @@ function updateTime() {
 
 }
 
-function calculateTime(closeHour, closeMin)
+function calculateTime(closeHour, closeMin, alwaysOpen)
 {
 	var currentTime = dateTime();
 	
 	var timeTillClose= new Array();
-	timeTillClose[0] = 0;
+	timeTillClose[0] = alwaysOpen;
 	timeTillClose[1] = closeHour - currentTime[1];
 	timeTillClose[2] = closeMin - currentTime[2];
 	//alert(timeTillClose[1] + ":" + timeTillClose[2]);
@@ -167,7 +176,7 @@ function formatTime(timeTillClose) {
 	}
 	else
 	{
-		timeString = "Open 24 hours";
+		timeString = "Open 24/7";
 	}
 	return timeString;
 	
