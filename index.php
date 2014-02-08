@@ -148,7 +148,7 @@
 							}
 							else
 							{
-									echo '<div class="pure-u-1-3"><div id="name">:wq
+									echo '<div class="pure-u-1-3"><div id="name">
 									' . $restaurant['name'] . '</div></div>';
 							}
 						}
