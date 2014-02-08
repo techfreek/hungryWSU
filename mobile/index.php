@@ -132,11 +132,11 @@
 							}
 							if($restaurant['website'] != null)
 							{
-								if(substr($restraunt['name']), -2) == "\'s")
+								if(substr($restaurant['name'], -2) == "'s")
 								{
 									echo '<div class="pure-u-1"><div id="website"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] .' Website</a></div></div>';
 								}
-								else if(substr($restraunt['name']), -2) == "s")
+								else if(substr($restaurant['name'], -1) == "s")
 								{
 									echo '<div class="pure-u-1"><div id="website"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] .'\' Website</a></div></div>';
 								}
