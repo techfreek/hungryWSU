@@ -6,9 +6,9 @@
   <meta name="keywords" content="Pullman, WSU, Cougs, Drunk, Hungry, munchies, drunchies, food, open, delivery">
   <meta name="description" content="It's late, and you are hungry. So, what's still open in Pullman?">
   <link rel="shortcut icon" href="../wsu.ico">
-  <script src="../jquery.js"></script>
-  <link href="../pure.css" rel="stylesheet">
-  <script src="../script.js"></script>
+  <script src="jquery.js"></script>
+  <link href="pure.css" rel="stylesheet">
+  <script src="script.js"></script>
   <link href="mobile.css" rel="stylesheet">
   <script type="text/javascript">
 	
@@ -37,7 +37,7 @@
 
 
 	<div id="content">
-	<img id="logo" src="../drunk.png"/>
+	<img id="logo" src="drunk.png"/>
 	
 	<script>
 		updateImage();
@@ -55,8 +55,8 @@
 			
 			<div id="results">
 				<?php  
-					include("../time.php");
-					$db_conn = parse_ini_file("../../config.ini");
+					include("time.php");
+					$db_conn = parse_ini_file("../config.ini");
 					date_default_timezone_set('America/Los_Angeles');
 					$date = date('m/d/Y h:i:s a', time());				
 					//print_r($date);
@@ -158,7 +158,7 @@
 				</script>
 		</div>
 		
-		<?php include '../footer.php'; ?>		
+		<?php include 'footer.php'; ?>		
 		
 	</div>
 	
