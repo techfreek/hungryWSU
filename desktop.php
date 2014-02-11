@@ -1,30 +1,3 @@
-<!DOCTYPE html>
-
-<html>
-<head>
-  <title>DrunkWSU</title>
-  <meta name="keywords" content="Pullman, WSU, Cougs, Drunk, Hungry, munchies, drunchies, food, open, delivery">  
-  <meta name="description" content="It's late, and you are hungry. So, what's still open in Pullman?">
-  
-  <link rel="shortcut icon" href="wsu.ico">
-  <script src="jquery.js"></script>
-  <link href="pure.css" rel="stylesheet">
-  <script src="script.js"></script>
-  <script type="text/javascript">
-	
-	$(document).ready(function() {
-			//closingTime();
-			updateTime();
-			updateText();
-			$( "#deliveryButton" ).click(function() {filter();});
-			setInterval(function(){updateTime()},60000); //This will be the update interval
-			
-		});
-    </script>
-	<link href="desktop.css" rel="stylesheet">
-</head>
-
-<body>
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
@@ -36,14 +9,14 @@
 	<div id="content">
 	<img id="logo" src="drunk.png"/>
 	<script>
-		
-		if(( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) || $(window).width() < 600) {
-			//var mobileURL = "http://m." + document.URL;
-			//alert(mobileURL);
-			//window.location = "mIndex.php";
-			//alert("This will eventually redirect you");
-		};
-		//getLocation();
+		$(document).ready(function() {
+                        //closingTime();
+                        updateTime();
+                        updateText();
+                        $( "#deliveryButton" ).click(function() {filter();});
+                        setInterval(function(){updateTime()},60000); //This will be the update interval
+
+                });
 		updateImage();
 	</script>
 	
@@ -180,6 +153,3 @@
 	<?php include 'footer.php'; ?>	
 			
 	</div>
-	
-</body>
-</html>

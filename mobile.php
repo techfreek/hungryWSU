@@ -1,31 +1,3 @@
-<!DOCTYPE html>
-
-<html>
-<head>
-  <title>DrunkWSU</title>
-  <meta name="keywords" content="Pullman, WSU, Cougs, Drunk, Hungry, munchies, drunchies, food, open, delivery">
-  <meta name="description" content="It's late, and you are hungry. So, what's still open in Pullman?">
-  <link rel="shortcut icon" href="../wsu.ico">
-  <script src="jquery.js"></script>
-  <link href="pure.css" rel="stylesheet">
-  <script src="script.js"></script>
-  <link href="mobile.css" rel="stylesheet">
-  <script type="text/javascript">
-	
-	$(document).ready(function() {
-		closingTime();
-		updateTime();
-		$( "#deliveryButton" ).click(function() {filter();});
-		mobileDetails();
-		hideDetails();
-		updateText();
-	});
-	
-	</script>
-	
-</head>
-
-<body>
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
@@ -40,6 +12,14 @@
 	<img id="logo" src="drunk.png"/>
 	
 	<script>
+		$(document).ready(function() {
+	                closingTime();
+	                updateTime();
+        	        $( "#deliveryButton" ).click(function() {filter();});
+	                mobileDetails();
+                	hideDetails();
+        	        updateText();
+	        });
 		updateImage();
 	</script>
 	
@@ -161,6 +141,3 @@
 		<?php include 'footer.php'; ?>		
 		
 	</div>
-	
-</body>
-</html>
