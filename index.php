@@ -11,6 +11,7 @@
   <link href="pure.css" rel="stylesheet">
   <script src="script.js"></script>
   <?php
+	error_reporting(E_ALL);
 	require_once 'Mobile_Detect.php';
 	$detect = new Mobile_Detect;
 	if( $detect->isMobile() ) {
@@ -24,13 +25,16 @@
 
 <body>
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+        <script>
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
+
 	<script type="text/javascript">
 
 		  var _gaq = _gaq || [];
@@ -44,36 +48,41 @@
 		  })();
 
 	</script>
+	
 	<div id="content">
 	<img id="logo" src="drunk.png"/>
 	<?php
+		error_reporting(E_ALL);
+		require_once 'Mobile_Detect.php';
+                $detect = new Mobile_Detect;
 		echo '<script>';
 		echo '$(document).ready(function() {';
-		if(global $detect->isMobile() ) {
+		echo '$( "#deliveryButton" ).click(function() {filter();});';
+                echo 'updateTime();';
+                echo 'updateText();';
+		if( $detect->isMobile() ) {
 			echo 'closingTime();';
-			echo 'updateTime();';
-			echo '$( "#deliveryButton" ).click(function() {filter();});';
 			echo 'mobileDetails();';
 			echo 'hideDetails();';
-        	 echo 'updateText();';
 		}
 		else
-		{	
-			echo 'updateTime();';
-			echo 'updateText();';
-			echo '$( "#deliveryButton" ).click(function() {filter();});';
+		{
 			echo 'setInterval(function(){updateTime()},60000);';
 		}
-		echo '});'
-		echo 'updateImage();'
-		echo '</script>'
+		echo '});';
+		echo 'updateImage();';
+		echo '</script>';
+		echo '<div id="tagLine">Let\'s face it, you\'re hungry. What\'s still open?</div>';
+		echo '<div id="deliveryButton"><div id="deliveryText">Want it delivered?</div></div>';
+		if(!( $detect->isMobile()) ) {
+			echo '<div id="facebookButton"><div class="fb-like" data-href="https://www.facebook.com/drunkWSU" data-layout="button_count" data-action="like" data-share="true" data-colorscheme="light" ></div></div>';
+
+		}
 	?>
-	<div id="tagLine">Let's face it, you're hungry. What's still open?</div>
-	<div id="deliveryButton">Want it delivered?</div>			
-	<div id="facebookButton"><div class="fb-like" data-href="https://www.facebook.com/drunkWSU" data-layout="button_count" data-action="like" data-share="true" data-colorscheme="light" ></div></div>
-	
+
 	<div id="results">
 	<?php
+
 		include("time.php");
 		$db_conn = parse_ini_file("../config.ini");
 		date_default_timezone_set('America/Los_Angeles');
@@ -101,7 +110,11 @@
 					ORDER BY sponsored DESC, uuid()";
 							
 		$results = $db->query($query);
-		if ( global $detect->isMobile() ) {
+		
+		require_once 'Mobile_Detect.php';
+                $detect = new Mobile_Detect;
+		
+		if ($detect->isMobile() ) {
 			include('mobile.php');
 		}
 		else
