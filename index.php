@@ -24,7 +24,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
 
 <script type="text/javascript">
 
@@ -39,19 +38,6 @@
   })();
 
 </script>
-
-<?php
-	require_once 'Mobile_Detect.php';
-	$detect = new Mobile_Detect;
-	if ( $detect->isMobile() ) {
-		include('mobile.php');
-	}
-	else
-	{
-		include('desktop.php');
-	}
-?>
-=======
 	<div id="fb-root"></div>
         <script>
         (function(d, s, id) {
@@ -153,6 +139,5 @@
 	?>
 </div>
 
->>>>>>> dev
 </body>
 </html>
