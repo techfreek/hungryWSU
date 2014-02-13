@@ -14,7 +14,12 @@ function isOpen($hour, $min, $openHour, $openMin, $closeHour, $closeMin, $always
 		$lateClosing = true;
 		$closeHourTemp += 24;
 	}
-	
+
+	if($lateClosing and equalTime($hour, $min, 0, 0))
+	{
+		return true;
+	}
+
 	if($lateClosing and lessThanTime($hour, $min, $closeHour, $closeMin) and greaterThanTime($hour, $min, 0, 0))
 	{ //needs to adjust how the time looks if it is after midnight so it does not auto think it is closed. 
 		//First checks if it closes late, is before closing, and after midnight
