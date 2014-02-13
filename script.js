@@ -1,11 +1,11 @@
 function filter() {
-	if($("#deliveryButton").text() == "Want it delivered?")
+	if($("#deliveryText").text() == "Want it delivered?")
 	{
-		$("#deliveryButton").text("Don't care for delivery?");
+		$("#deliveryText").text("Don't care for delivery?");
 	}
 	else
 	{
-		$("#deliveryButton").text("Want it delivered?");
+		$("#deliveryText").text("Want it delivered?");
 	}
 	$( "div" ).each(function () {
 		if($(this).is('.result')) {	
