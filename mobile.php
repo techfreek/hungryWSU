@@ -15,6 +15,20 @@ else
 {
 	foreach ($results as $restaurant)
 	{
+		if(lessThanTime($hour, $min, 5, 0))
+		{
+			$yesterTime = db->query("SELECT closeHour, closeMin
+													FROM times
+													WHERE times.location = $restaurant['location'] AND
+																times.day = (($day + 6) % 7)
+													LIMIT 1;");
+			
+			if($yesterTime != NULL and lessThanTime($yesterTime['closeHour'], $yesterTime['closeMin'], 5, 0))
+			{
+				$restaurant['closeHour'] = $yesterTime['closeHour'];
+				$restaurant['closeMin'] = $yesterTime['closeMin'];
+			}
+		}
 		if(! (isOpen($hour, $min, $restaurant['openHour'], $restaurant['openMin'], $restaurant['closeHour'], $restaurant['closeMin'], $restaurant['alwaysOpen'])))
 		{
 			continue;

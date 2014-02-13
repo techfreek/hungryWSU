@@ -60,4 +60,14 @@ function greaterThanTime($hour1, $min1, $hour2, $min2)
 	return false;
 }
 
+function greaterThanEqualTime($hour1, $min1, $hour2, $min2)
+{
+	if(($hour1 > $hour2) or (($hour1 == $hour2) and (($min1 > $min2) or ($min1 == $min2)))
+	{
+		return true;
+	}
+	return false;
+}
+
+
 ?>
