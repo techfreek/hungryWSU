@@ -66,7 +66,7 @@
 	<div id="content">
 	<img id="logo" src="drunk.png"/>
 	<?php
-		error_reporting(E_ALL);
+		//error_reporting(E_ALL);
 		require_once 'Mobile_Detect.php';
                 $detect = new Mobile_Detect;
 		echo '<script>';
@@ -127,12 +127,13 @@
 		
 		require_once 'Mobile_Detect.php';
                 $detect = new Mobile_Detect;
-		
+
 		if ($detect->isMobile() ) {
 			include('mobile.php');
 		}
 		else
 		{
+			echo 'almost desktop';
 			include('desktop.php');
 		}
 		include 'footer.php';

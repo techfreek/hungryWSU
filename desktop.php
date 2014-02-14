@@ -1,4 +1,4 @@
-<?php  
+<?php
 	$results = $db->query($query);
 	
 	if(count($results) == 0)
@@ -19,11 +19,13 @@
 		{
 			if(lessThanTime($hour, $min, 5, 0))
 			{ //Chose 5am as a random number for when places probably aren't opening, but may close before then
-				$yesterTime = db->query("SELECT closeHour, closeMin
-														FROM times
-														WHERE times.location = $restaurant['location'] AND
-																	times.day = (($day + 6) % 7) 
-														LIMIT 1;"); //selects the closing time data from the previous day at that location
+				$id = $restaurant['id'];
+				
+				$yesterTime = $db->query("SELECT closeHour, closeMin
+				 			 FROM times
+							 WHERE times.location = $id AND
+							 times.day = (($day + 6) % 7)
+							 LIMIT 1;"); //selects the closing time data from the previous day at that location
 														//(($day + 6) % 7) allows us to select the previous day even if it is sunday (0)
 														
 				if($yesterTime != NULL and lessThanTime($yesterTime['closeHour'], $yesterTime['closeMin'], 5, 0))
@@ -32,6 +34,7 @@
 					$restaurant['closeMin'] = $yesterTime['closeMin'];
 				}
 			}
+			
 			if(! (isOpen($hour, $min, $restaurant['openHour'], $restaurant['openMin'], $restaurant['closeHour'], $restaurant['closeMin'], $restaurant['alwaysOpen'])))
 			{ //if it's not open, we just skip this result
 				continue;
