@@ -56,7 +56,7 @@ else
 		echo '</div>';
 		echo '<div class="details">';
 		echo '<div class="pure-g">';
-		echo '<div class="pure-u-1-2"><div id="address" id="detail"><a href="http://maps.google.com/maps?ie=UTF-8&amp;hl=en&amp;q=' . str_replace(' ', '+', $restaurant['address']) . '%0A' . $restaurant['city'] . '%2C+' . $restaurant['state'] . '+' . $restaurant['zip'] .'">' . $restaurant['address'] . ', ' . $restaurant['city'] . ', ' . $restaurant['state'] . ' ' . $restaurant['zip'] . '</a></div></div>';
+		echo '<div class="pure-u-1-2"><div id="address" id="detail"><a target=”_blank” href="http://maps.google.com/maps?ie=UTF-8&amp;hl=en&amp;q=' . str_replace(' ', '+', $restaurant['address']) . '%0A' . $restaurant['city'] . '%2C+' . $restaurant['state'] . '+' . $restaurant['zip'] .'">' . $restaurant['address'] . ', ' . $restaurant['city'] . ', ' . $restaurant['state'] . ' ' . $restaurant['zip'] . '</a></div></div>';
 		echo '<div class="pure-u-1-2"><div id="phoneNum">Phone: ' . $restaurant['phoneNumber'] . '</div></div>';
 		if( $restaurant['delivers'] == 1)
 		{
@@ -70,11 +70,11 @@ else
 		{
 			if(substr($restaurant['name'], -2) == "'s")
 			{
-				echo '<div class="pure-u-1"><div id="website"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] .' Website</a></div></div>';
+				echo '<div class="pure-u-1"><div id="website"><a target=”_blank” href="' . $restaurant['website'] . '">' . $restaurant['name'] .' Website</a></div></div>';
 			}
 			else if(substr($restaurant['name'], -1) == "s")
 			{
-				echo '<div class="pure-u-1"><div id="website"><a href="' . $restaurant['website'] . '">' . $restaurant['name'] .'\' Website</a></div></div>';
+				echo '<div class="pure-u-1"><div id="website"><a target=”_blank” href="' . $restaurant['website'] . '">' . $restaurant['name'] .'\' Website</a></div></div>';
 			}
 			else
 			{
