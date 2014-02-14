@@ -155,6 +155,7 @@ body {
 	padding: 10px;
 	font-weight: 600;
 	margin-bottom: 25px;
+	margin-top: 75px;
 }
 
 #disclaimer {
@@ -210,6 +211,25 @@ body {
 	padding: 15px;
 	vertical-align: middle;
 }
+
+iframe[src^="http://www.facebook.com"]
+{
+        transform: scale(4);
+        -ms-transform: scale(4);
+        -webkit-transform: scale(4);
+        -o-transform: scale(4);
+        -moz-transform: scale(4);
+        transform-origin: center;
+        -ms-transform-origin: center;
+        -webkit-transform-origin: center;
+        -moz-transform-origin: center;
+        -webkit-transform-origin: center;
+	height: 100px;
+	margin: 25px;
+	position: relative;
+}
+
+
 
 #footer A:link {color: #FFF;}
 #footer A:visited {color: #F0F;}

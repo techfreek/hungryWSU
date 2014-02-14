@@ -287,10 +287,3 @@ function displayDistance(myLatitude, myLongitude)
 		}
 	});
 }
-
-//Used to parse data from php.ini for DB connection		
-/*function loadConfig( $vars = array() ) {
-    foreach( $vars as $v ) {
-        define( $v, get_cfg_var( "myapp.cfg.$v" ) );
-    }
-}*/

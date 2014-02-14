@@ -13,27 +13,32 @@ if(count($results) == 0)
 }
 else
 {
-	foreach ($results as $restaurant)
-	{
-		if(lessThanTime($hour, $min, 5, 0))
-		{
-			$yesterTime = db->query("SELECT closeHour, closeMin
-													FROM times
-													WHERE times.location = $restaurant['location'] AND
-																times.day = (($day + 6) % 7)
-													LIMIT 1;");
-			
-			if($yesterTime != NULL and lessThanTime($yesterTime['closeHour'], $yesterTime['closeMin'], 5, 0))
-			{
-				$restaurant['closeHour'] = $yesterTime['closeHour'];
-				$restaurant['closeMin'] = $yesterTime['closeMin'];
-			}
-		}
-		if(! (isOpen($hour, $min, $restaurant['openHour'], $restaurant['openMin'], $restaurant['closeHour'], $restaurant['closeMin'], $restaurant['alwaysOpen'])))
-		{
-			continue;
-		}
-		
+	  $lateNight = lessThanTime($hour, $min, 5, 0);
+          $yesterDate = (($day + 6) % 7);
+          foreach ($results as $restaurant)
+          {
+          	if($lateNight)
+                { //Chose 5am as a random number for when places probably aren't opening, but may close before then
+                	$id = $restaurant['id'];
+                        $yesterday = $db->query("SELECT closeHour, closeMin
+                                                 FROM times
+                                                 WHERE times.location = $id AND
+                                                 times.day = $yesterDate
+                                                 LIMIT 1;"); //selects the closing time data from the previous day at that location
+                                                                                                                //(($day + 6) % 7) allows us to select the previous day even if it is sunday (0)
+                        $yesterTime = $yesterday->fetch();
+                        if(!(is_null($yesterTime)) and lessThanTime($yesterTime['closeHour'], $yesterTime['closeMin'], 5, 0))
+                        { //We use that new time if it actually exists, and its before 5am (so we won't use it if they close at 11pm)
+                                         $restaurant['closeHour'] = $yesterTime['closeHour'];
+                                         $restaurant['closeMin'] = $yesterTime['closeMin'];
+                        }
+                }
+
+                if(! (isOpen($hour, $min, $restaurant['openHour'], $restaurant['openMin'], $restaurant['closeHour'], $restaurant['closeMin'], $restaurant['alwaysOpen'])))
+                { //if it's not open, we just skip this result
+                        continue;
+                }
+
 		echo '<div class="result">';
 		echo '<div class="summary">';
 		echo '<div class="pure-g">';
