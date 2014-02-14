@@ -287,3 +287,4 @@ function displayDistance(myLatitude, myLongitude)
 		}
 	});
 }
+

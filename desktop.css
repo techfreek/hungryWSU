@@ -26,7 +26,8 @@ body {
         clear: both;
         margin: 0 auto;
         color: #fff;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
+	margin-top: 25px;
 }
 
 
@@ -42,6 +43,10 @@ body {
 	font-weight: 800;
 	font-size: 20px;
 	text-align: center;
+}
+
+#deliveryButton:hover {
+	box-shadow: 5px 5px 20px #000;
 }
 
 #content {
@@ -77,6 +82,10 @@ body {
 	text-shadow: 3px 3px #000;
 }
 
+#name a:hover {
+	text-shadow: 5px 5px #000;
+}
+
 #type {
 	text-align: right;
 	font-weight: 600;
@@ -91,6 +100,10 @@ body {
 
 #address a{
 	text-shadow: 1px 2px #BFBFBF;
+}
+
+#address a:hover {
+	text-shadow: 2px 4px #BFBFBF;
 }
 
 #phoneNum {
@@ -189,7 +202,6 @@ iframe[src^="http://www.facebook.com"]
 	-webkit-transform-origin: center;
 	-moz-transform-origin: center;
 	-webkit-transform-origin: center;
-	padding-bottom: 10px;
 }
 
 #footer A:link {color: #FFF;}
