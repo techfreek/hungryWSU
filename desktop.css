@@ -144,7 +144,7 @@ body {
 
 #footer {
 	text-align: center;
-	font-size: 25px;
+	font-size: 222px;
 	color: #fff;
 	background-color: #5e6a71;
 	width: 65%;
@@ -155,7 +155,7 @@ body {
 }
 
 #disclaimer {
-	font-size: 18px;
+	font-size: 15px;
 	margin: 0px;
 }
 
@@ -164,7 +164,7 @@ body {
 }
 
 #footer a {
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: 500;
 }
 

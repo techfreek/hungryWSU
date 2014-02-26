@@ -38,7 +38,7 @@ function updateText()
 {
 	if(document.URL.indexOf("hungry") >= 0)
 		{
-			document.title = "HungyWSU";
+			document.title = "HungryWSU";
 			$( "div" ).each(function () {
 				if($(this).is("#affil")) {
 					$(this).text("HungryWSU.com has no affiliation with WSU");
