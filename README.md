@@ -5,4 +5,6 @@ This was the first 'real' website I ever made. I had messed around with websites
 
 I apologize if the code is really sloppy, it was hacked together. It proved to be an excellent mvp (minimum viable product) as I re-wrote the idea as ishungry.co which takes the concept and scales it up to the entire united states.
 
+The site has been turned off and the original urls redirected to ishungry.co.
+
 Site created by Alex Bahm.
